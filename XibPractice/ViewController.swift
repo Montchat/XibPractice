@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-	
 	let testModel = SliderViewModel(with: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 	
 	@IBOutlet weak var sliderView: SliderView!
@@ -22,12 +21,6 @@ class ViewController: UIViewController {
 //		sliderView.config(with: testModel)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
-
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
-	}
-
 
 }
 

@@ -19,6 +19,7 @@
 		FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */; };
 		FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55041E1DA50000F0E94D /* SliderView.swift */; };
 		FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55061E1DA7FE00F0E94D /* Fonts.swift */; };
+		FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentColors.swift; sourceTree = "<group>"; };
 		FCEB55041E1DA50000F0E94D /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		FCEB55061E1DA7FE00F0E94D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderChoiceViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */,
 				FCEB55001E1D9CDB00F0E94D /* Components.xib */,
 				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
+				FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */,
 				FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */,
 				FCEB55061E1DA7FE00F0E94D /* Fonts.swift */,
 				FCEB54D91E1D9CCD00F0E94D /* Assets.xcassets */,
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCEB54D81E1D9CCD00F0E94D /* XibPractice.xcdatamodeld in Sources */,
+				FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */,
 				FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */,
 				FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
