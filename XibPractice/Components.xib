@@ -36,6 +36,9 @@
                 </view>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-yA-ZhH">
                     <rect key="frame" x="10" y="65" width="355" height="31"/>
+                    <connections>
+                        <action selector="slide:" destination="o4w-Ot-iIX" eventType="valueChanged" id="HIZ-Of-g5E"/>
+                    </connections>
                 </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINVALUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmD-jV-azE">
                     <rect key="frame" x="12" y="116" width="51.5" height="12"/>
@@ -90,13 +93,7 @@
                 <outletCollection property="values" destination="iDf-QY-n2T" collectionClass="NSMutableArray" id="Iwm-uN-h1a"/>
                 <outletCollection property="values" destination="TjM-AO-UxX" collectionClass="NSMutableArray" id="peO-sm-8LW"/>
             </connections>
-            <point key="canvasLocation" x="-297.5" y="-281"/>
-        </view>
-        <view contentMode="scaleToFill" id="G0j-nT-QPS">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="-348" y="178"/>
+            <point key="canvasLocation" x="-349" y="-306"/>
         </view>
     </objects>
 </document>

@@ -21,10 +21,20 @@ class SliderView: UIView {
 	
 	@IBOutlet var values: [UILabel]! // min == 0, median == 1, max == 2
 	
+	@IBAction func slide(_ sender: UISlider) {
+		level.text = "Level: \(slider.value)" 
+	}
+	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		for label in labels { 
+		slider.maximumValue = 10
+		slider.thumbTintColor = UIColor.tapDodgerBlue
+		
+		slider.maximumTrackTintColor = UIColor.black
+		slider.minimumTrackTintColor = UIColor.blue
+		
+		for value in values { value.textColor = UIColor.tapGunmetal }
 		
 	}
 	

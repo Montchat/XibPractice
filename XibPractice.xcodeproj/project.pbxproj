@@ -18,6 +18,7 @@
 		FCEB55011E1D9CDB00F0E94D /* Components.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEB55001E1D9CDB00F0E94D /* Components.xib */; };
 		FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */; };
 		FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55041E1DA50000F0E94D /* SliderView.swift */; };
+		FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55061E1DA7FE00F0E94D /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FCEB55001E1D9CDB00F0E94D /* Components.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Components.xib; sourceTree = "<group>"; };
 		FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentColors.swift; sourceTree = "<group>"; };
 		FCEB55041E1DA50000F0E94D /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		FCEB55061E1DA7FE00F0E94D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				FCEB55001E1D9CDB00F0E94D /* Components.xib */,
 				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
 				FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */,
+				FCEB55061E1DA7FE00F0E94D /* Fonts.swift */,
 				FCEB54D91E1D9CCD00F0E94D /* Assets.xcassets */,
 				FCEB54DB1E1D9CCD00F0E94D /* LaunchScreen.storyboard */,
 				FCEB54DE1E1D9CCD00F0E94D /* Info.plist */,
@@ -279,6 +282,7 @@
 				FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */,
 				FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
+				FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */,
 				FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

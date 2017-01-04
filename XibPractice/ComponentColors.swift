@@ -69,4 +69,5 @@ extension UIColor {
 	class var tapGunmetal: UIColor {
 		return UIColor(red: 82.0 / 255.0, green: 92.0 / 255.0, blue: 96.0 / 255.0, alpha: 1.0)
 	}
+	
 }
