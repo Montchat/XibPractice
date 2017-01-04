@@ -10,6 +10,8 @@ import UIKit
 
 class SliderView: UIView {
 	
+	var model:SliderViewModel = SliderViewModel()
+	
 	@IBOutlet weak var question: UILabel!
 	@IBOutlet weak var level: UILabel!
 
@@ -22,7 +24,10 @@ class SliderView: UIView {
 	@IBOutlet var values: [UILabel]! // min == 0, median == 1, max == 2
 	
 	@IBAction func slide(_ sender: UISlider) {
-		level.text = "Level: \(slider.value)" 
+		let intValue = Int(slider.value)
+		level.text = "Level: \(intValue)"
+		model.level = Int(intValue)
+		
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -38,15 +43,41 @@ class SliderView: UIView {
 		
 	}
 	
-	func config(with question:String, minValue:String, medianValue:String?, maxValue:String) {
+	func config(with model:SliderViewModel) {
 		
-		self.question.text = question
-		self.minValue.text = minValue
-		self.maxValue.text = maxValue
+		self.question.text = model.question
+		self.minValue.text = model.minValue
+		self.maxValue.text = model.maxValue
 		
-		if medianValue != nil { self.medianValue.text = medianValue }
+		if medianValue != nil { self.medianValue.text = model.medianValue }
 		else { self.medianValue.alpha = 0 }
 		
 	}
+	
+}
 
+
+class SliderViewModel {
+	
+	var question:String = ""
+	
+	var minValue:String = ""
+	var medianValue:String = ""
+	var maxValue:String = ""
+	
+	var level:Int = 0
+	
+	init() {
+		
+	}
+	
+	init(with question:String, minValue:String, medianValue:String, maxValue:String) {
+		
+		self.question = question
+		self.minValue = minValue
+		self.maxValue = maxValue
+		self.medianValue = medianValue
+		
+	}
+	
 }
