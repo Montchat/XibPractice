@@ -10,7 +10,7 @@ import UIKit
 
 class SliderView: UIView {
 	
-	var model:SliderViewModel = SliderViewModel()
+	var model:SliderChoiceViewModel = SliderChoiceViewModel()
 	
 	@IBOutlet weak var question: UILabel!
 	@IBOutlet weak var level: UILabel!
@@ -43,7 +43,7 @@ class SliderView: UIView {
 		
 	}
 	
-	func config(with model:SliderViewModel) {
+	func config(with model:SliderChoiceViewModel) {
 		
 		self.question.text = model.question
 		self.minValue.text = model.minValue
@@ -56,8 +56,7 @@ class SliderView: UIView {
 	
 }
 
-
-class SliderViewModel {
+class SliderChoiceViewModel {
 	
 	var question:String = ""
 	
