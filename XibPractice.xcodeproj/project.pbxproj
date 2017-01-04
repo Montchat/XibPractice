@@ -20,6 +20,8 @@
 		FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55041E1DA50000F0E94D /* SliderView.swift */; };
 		FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55061E1DA7FE00F0E94D /* Fonts.swift */; };
 		FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */; };
+		FCEB550C1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */; };
+		FCEB550D1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		FCEB55041E1DA50000F0E94D /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		FCEB55061E1DA7FE00F0E94D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderChoiceViewModel.swift; sourceTree = "<group>"; };
+		FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultiChoiceViewModel.swift; path = "../../../Documents/Projects/Client/thyroid-3D-ios/thyroid-3D-ios/MultiChoiceViewModel.swift"; sourceTree = "<group>"; };
+		FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YesNoChoiceViewModel.swift; path = "../../../Documents/Projects/Client/thyroid-3D-ios/thyroid-3D-ios/YesNoChoiceViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */,
 				FCEB55001E1D9CDB00F0E94D /* Components.xib */,
 				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
+				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
+				FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */,
 				FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */,
 				FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */,
 				FCEB55061E1DA7FE00F0E94D /* Fonts.swift */,
@@ -281,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEB550D1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift in Sources */,
 				FCEB54D81E1D9CCD00F0E94D /* XibPractice.xcdatamodeld in Sources */,
 				FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */,
 				FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */,
@@ -288,6 +295,7 @@
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
 				FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */,
 				FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */,
+				FCEB550C1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
