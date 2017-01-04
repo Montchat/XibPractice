@@ -33,6 +33,11 @@ class SliderView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
+	}
+	
+	func config(with model:SliderChoiceViewModel) {
+		
+		
 		slider.maximumValue = 10
 		slider.thumbTintColor = UIColor.tapDodgerBlue
 		
@@ -40,10 +45,7 @@ class SliderView: UIView {
 		slider.minimumTrackTintColor = UIColor.blue
 		
 		for value in values { value.textColor = UIColor.tapGunmetal }
-		
-	}
-	
-	func config(with model:SliderChoiceViewModel) {
+
 		
 		self.question.text = model.question
 		self.minValue.text = model.minValue

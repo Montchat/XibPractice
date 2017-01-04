@@ -13,12 +13,17 @@ class ViewController: UIViewController {
 	let testModel = SliderChoiceViewModel(with: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 	
 	@IBOutlet weak var sliderView: SliderView!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		sliderView = Bundle.main.loadNibNamed("Components", owner: self, options:nil)?[0] as! SliderView
 		
-//		sliderView.config(with: testModel)
+		view.addSubview(sliderView)
+		
+		print("loaded")
+		
+		sliderView.config(with: testModel)
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
