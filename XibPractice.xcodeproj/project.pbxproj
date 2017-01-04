@@ -17,6 +17,7 @@
 		FCEB54F31E1D9CCD00F0E94D /* XibPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54F21E1D9CCD00F0E94D /* XibPracticeUITests.swift */; };
 		FCEB55011E1D9CDB00F0E94D /* Components.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEB55001E1D9CDB00F0E94D /* Components.xib */; };
 		FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */; };
+		FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55041E1DA50000F0E94D /* SliderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		FCEB54F41E1D9CCD00F0E94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCEB55001E1D9CDB00F0E94D /* Components.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Components.xib; sourceTree = "<group>"; };
 		FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentColors.swift; sourceTree = "<group>"; };
+		FCEB55041E1DA50000F0E94D /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */,
 				FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */,
 				FCEB55001E1D9CDB00F0E94D /* Components.xib */,
+				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
 				FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */,
 				FCEB54D91E1D9CCD00F0E94D /* Assets.xcassets */,
 				FCEB54DB1E1D9CCD00F0E94D /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 				FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */,
 				FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
+				FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
