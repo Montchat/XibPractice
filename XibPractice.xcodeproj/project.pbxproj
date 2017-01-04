@@ -16,6 +16,7 @@
 		FCEB54E81E1D9CCD00F0E94D /* XibPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54E71E1D9CCD00F0E94D /* XibPracticeTests.swift */; };
 		FCEB54F31E1D9CCD00F0E94D /* XibPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54F21E1D9CCD00F0E94D /* XibPracticeUITests.swift */; };
 		FCEB55011E1D9CDB00F0E94D /* Components.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEB55001E1D9CDB00F0E94D /* Components.xib */; };
+		FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		FCEB54F21E1D9CCD00F0E94D /* XibPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibPracticeUITests.swift; sourceTree = "<group>"; };
 		FCEB54F41E1D9CCD00F0E94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCEB55001E1D9CDB00F0E94D /* Components.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Components.xib; sourceTree = "<group>"; };
+		FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */,
 				FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */,
 				FCEB55001E1D9CDB00F0E94D /* Components.xib */,
+				FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */,
 				FCEB54D91E1D9CCD00F0E94D /* Assets.xcassets */,
 				FCEB54DB1E1D9CCD00F0E94D /* LaunchScreen.storyboard */,
 				FCEB54DE1E1D9CCD00F0E94D /* Info.plist */,
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCEB54D81E1D9CCD00F0E94D /* XibPractice.xcdatamodeld in Sources */,
+				FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */,
 				FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
 			);
