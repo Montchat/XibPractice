@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="o4w-Ot-iIX">
+        <view contentMode="scaleToFill" id="o4w-Ot-iIX" customClass="SliderView" customModule="XibPractice" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -37,8 +37,8 @@
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-yA-ZhH">
                     <rect key="frame" x="10" y="65" width="355" height="31"/>
                 </slider>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MINVALUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmD-jV-azE">
-                    <rect key="frame" x="12" y="116" width="116" height="12"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINVALUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmD-jV-azE">
+                    <rect key="frame" x="12" y="116" width="51.5" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -79,7 +79,18 @@
                 <constraint firstItem="SYT-QF-JxF" firstAttribute="top" secondItem="o4w-Ot-iIX" secondAttribute="top" constant="12" id="xKW-wD-agb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-297" y="-281"/>
+            <connections>
+                <outlet property="level" destination="SYT-QF-JxF" id="yBP-bf-apO"/>
+                <outlet property="maxValue" destination="TjM-AO-UxX" id="9NL-QB-dDX"/>
+                <outlet property="medianValue" destination="iDf-QY-n2T" id="J3v-6H-NA7"/>
+                <outlet property="minValue" destination="hmD-jV-azE" id="k0M-cK-HZh"/>
+                <outlet property="question" destination="XyS-oT-Utw" id="Kh9-A3-bqi"/>
+                <outlet property="slider" destination="7Ca-yA-ZhH" id="kcm-gx-c6o"/>
+                <outletCollection property="values" destination="hmD-jV-azE" collectionClass="NSMutableArray" id="907-ap-Bfh"/>
+                <outletCollection property="values" destination="iDf-QY-n2T" collectionClass="NSMutableArray" id="Iwm-uN-h1a"/>
+                <outletCollection property="values" destination="TjM-AO-UxX" collectionClass="NSMutableArray" id="peO-sm-8LW"/>
+            </connections>
+            <point key="canvasLocation" x="-297.5" y="-281"/>
         </view>
         <view contentMode="scaleToFill" id="G0j-nT-QPS">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
