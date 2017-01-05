@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC7D6A3A1E1EA55A0080E88C /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Components.swift */; };
 		FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */; };
 		FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */; };
 		FCEB54D51E1D9CCD00F0E94D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC7D6A391E1EA55A0080E88C /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		FCEB54CC1E1D9CCD00F0E94D /* XibPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XibPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
+				FC7D6A391E1EA55A0080E88C /* Components.swift */,
 				FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */,
 			);
 			name = SliderViewComponent;
@@ -300,6 +303,7 @@
 				FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */,
 				FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */,
 				FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */,
+				FC7D6A3A1E1EA55A0080E88C /* Components.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
 				FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */,
 				FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */,

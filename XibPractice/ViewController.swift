@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		sliderView = Bundle.main.loadNibNamed("Components", owner: self, options:nil)?[0] as! SliderView
+		sliderView = Bundle.main.loadNibNamed(Component.SliderView, owner: self, options:nil)?[0] as! SliderView
 		view.addSubview(sliderView)
 		
 		sliderView.config(with: testModel)
