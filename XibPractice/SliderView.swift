@@ -33,6 +33,8 @@ class SliderView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
+		fromNib()
+		
 	}
 	
 	func config(with model:SliderChoiceViewModel) {
