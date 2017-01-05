@@ -18,13 +18,9 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		sliderView = Bundle.main.loadNibNamed("Components", owner: self, options:nil)?[0] as! SliderView
-		
 		view.addSubview(sliderView)
 		
-		print("loaded")
-		
 		sliderView.config(with: testModel)
-		// Do any additional setup after loading the view, typically from a nib.
 	}
 
 }

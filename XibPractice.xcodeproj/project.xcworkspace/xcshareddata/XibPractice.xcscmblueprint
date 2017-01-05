@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "99EFEC926CE48150ACBFAE41A4F1214706697C64",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "99EFEC926CE48150ACBFAE41A4F1214706697C64" : 9223372036854775807,
+    "3BC89ADCFFEF0F8A099F8F327E7C70CB45DA17A4" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C80CF70B-5BA5-4C2F-9226-3BB952566A13",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "99EFEC926CE48150ACBFAE41A4F1214706697C64" : "XibPractice\/",
+    "3BC89ADCFFEF0F8A099F8F327E7C70CB45DA17A4" : "..\/Documents\/Projects\/Client\/thyroid-3D-ios"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "XibPractice",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "XibPractice.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/hanekedesign\/thyroid-3D-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3BC89ADCFFEF0F8A099F8F327E7C70CB45DA17A4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Montchat\/XibPractice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "99EFEC926CE48150ACBFAE41A4F1214706697C64"
+    }
+  ]
+}

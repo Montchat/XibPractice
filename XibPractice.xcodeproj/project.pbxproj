@@ -15,7 +15,7 @@
 		FCEB54DD1E1D9CCD00F0E94D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEB54DB1E1D9CCD00F0E94D /* LaunchScreen.storyboard */; };
 		FCEB54E81E1D9CCD00F0E94D /* XibPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54E71E1D9CCD00F0E94D /* XibPracticeTests.swift */; };
 		FCEB54F31E1D9CCD00F0E94D /* XibPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54F21E1D9CCD00F0E94D /* XibPracticeUITests.swift */; };
-		FCEB55011E1D9CDB00F0E94D /* Components.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEB55001E1D9CDB00F0E94D /* Components.xib */; };
+		FCEB55011E1D9CDB00F0E94D /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEB55001E1D9CDB00F0E94D /* SliderView.xib */; };
 		FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */; };
 		FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55041E1DA50000F0E94D /* SliderView.swift */; };
 		FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55061E1DA7FE00F0E94D /* Fonts.swift */; };
@@ -56,7 +56,7 @@
 		FCEB54EE1E1D9CCD00F0E94D /* XibPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XibPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEB54F21E1D9CCD00F0E94D /* XibPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibPracticeUITests.swift; sourceTree = "<group>"; };
 		FCEB54F41E1D9CCD00F0E94D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCEB55001E1D9CDB00F0E94D /* Components.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Components.xib; sourceTree = "<group>"; };
+		FCEB55001E1D9CDB00F0E94D /* SliderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
 		FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentColors.swift; sourceTree = "<group>"; };
 		FCEB55041E1DA50000F0E94D /* SliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		FCEB55061E1DA7FE00F0E94D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */,
 				FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */,
 				FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */,
-				FCEB55001E1D9CDB00F0E94D /* Components.xib */,
+				FCEB55001E1D9CDB00F0E94D /* SliderView.xib */,
 				FCEB550E1E1DB23D00F0E94D /* SliderViewComponent */,
 				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
 				FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */,
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCEB54DD1E1D9CCD00F0E94D /* LaunchScreen.storyboard in Resources */,
-				FCEB55011E1D9CDB00F0E94D /* Components.xib in Resources */,
+				FCEB55011E1D9CDB00F0E94D /* SliderView.xib in Resources */,
 				FCEB54DA1E1D9CCD00F0E94D /* Assets.xcassets in Resources */,
 				FCEB54D51E1D9CCD00F0E94D /* Main.storyboard in Resources */,
 			);
@@ -554,6 +554,7 @@
 				FCEB54F91E1D9CCD00F0E94D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCEB54FA1E1D9CCD00F0E94D /* Build configuration list for PBXNativeTarget "XibPracticeTests" */ = {
 			isa = XCConfigurationList;
@@ -562,6 +563,7 @@
 				FCEB54FC1E1D9CCD00F0E94D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCEB54FD1E1D9CCD00F0E94D /* Build configuration list for PBXNativeTarget "XibPracticeUITests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +572,7 @@
 				FCEB54FF1E1D9CCD00F0E94D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
