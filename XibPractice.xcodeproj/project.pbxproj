@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC7D6A3A1E1EA55A0080E88C /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Components.swift */; };
+		FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Component.swift */; };
 		FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */; };
 		FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */; };
 		FCEB54D51E1D9CCD00F0E94D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */; };
@@ -43,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC7D6A391E1EA55A0080E88C /* Components.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		FC7D6A391E1EA55A0080E88C /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		FCEB54CC1E1D9CCD00F0E94D /* XibPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XibPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,7 +176,7 @@
 		FCEB550E1E1DB23D00F0E94D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FC7D6A391E1EA55A0080E88C /* Components.swift */,
+				FC7D6A391E1EA55A0080E88C /* Component.swift */,
 				FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */,
 				FC7D6A3D1E1EA6A00080E88C /* YesNoView */,
 				FC7D6A3B1E1EA6780080E88C /* SliderView */,
@@ -327,7 +327,7 @@
 				FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */,
 				FCEB55031E1DA1FF00F0E94D /* ComponentColors.swift in Sources */,
 				FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */,
-				FC7D6A3A1E1EA55A0080E88C /* Components.swift in Sources */,
+				FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
 				FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */,
 				FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */,
