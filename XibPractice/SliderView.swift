@@ -37,7 +37,6 @@ class SliderView: UIView {
 	
 	func config(with model:SliderChoiceViewModel) {
 		
-		
 		slider.maximumValue = 10
 		slider.thumbTintColor = UIColor.tapDodgerBlue
 		
@@ -46,7 +45,6 @@ class SliderView: UIView {
 		
 		for value in values { value.textColor = UIColor.tapGunmetal }
 
-		
 		self.question.text = model.question
 		self.minValue.text = model.minValue
 		self.maxValue.text = model.maxValue

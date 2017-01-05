@@ -92,6 +92,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC7D6A3B1E1EA6780080E88C /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
+				FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */,
+			);
+			name = SliderView;
+			sourceTree = "<group>";
+		};
+		FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */ = {
+			isa = PBXGroup;
+			children = (
+				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
+			);
+			name = MultiChoiceView;
+			sourceTree = "<group>";
+		};
+		FC7D6A3D1E1EA6A00080E88C /* YesNoView */ = {
+			isa = PBXGroup;
+			children = (
+				FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */,
+			);
+			name = YesNoView;
+			sourceTree = "<group>";
+		};
 		FCEB54C31E1D9CCD00F0E94D = {
 			isa = PBXGroup;
 			children = (
@@ -119,9 +144,7 @@
 				FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */,
 				FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */,
 				FCEB55001E1D9CDB00F0E94D /* SliderView.xib */,
-				FCEB550E1E1DB23D00F0E94D /* SliderViewComponent */,
-				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
-				FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */,
+				FCEB550E1E1DB23D00F0E94D /* Components */,
 				FCEB55021E1DA1FF00F0E94D /* ComponentColors.swift */,
 				FCEB55061E1DA7FE00F0E94D /* Fonts.swift */,
 				FCEB54D91E1D9CCD00F0E94D /* Assets.xcassets */,
@@ -150,14 +173,15 @@
 			path = XibPracticeUITests;
 			sourceTree = "<group>";
 		};
-		FCEB550E1E1DB23D00F0E94D /* SliderViewComponent */ = {
+		FCEB550E1E1DB23D00F0E94D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
 				FC7D6A391E1EA55A0080E88C /* Components.swift */,
-				FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */,
+				FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */,
+				FC7D6A3D1E1EA6A00080E88C /* YesNoView */,
+				FC7D6A3B1E1EA6780080E88C /* SliderView */,
 			);
-			name = SliderViewComponent;
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
