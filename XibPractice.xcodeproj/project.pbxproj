@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FC10F55D1E24001B00226AE8 /* WheelChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */; };
-		FC10F5601E24003D00226AE8 /* WheelChoiceCellxib in Resources */ = {isa = PBXBuildFile; fileRef = FC10F55F1E24003D00226AE8 /* WheelChoiceCellxib */; };
+		FC10F5601E24003D00226AE8 /* WheelChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */; };
 		FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Component.swift */; };
 		FC7D6A401E1EAA7A0080E88C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */; };
 		FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */; };
@@ -47,7 +47,7 @@
 
 /* Begin PBXFileReference section */
 		FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelChoiceViewModel.swift; sourceTree = "<group>"; };
-		FC10F55F1E24003D00226AE8 /* WheelChoiceCellxib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WheelChoiceCellxib; sourceTree = "<group>"; };
+		FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WheelChoiceCell.xib; sourceTree = "<group>"; };
 		FC7D6A391E1EA55A0080E88C /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FCEB54CC1E1D9CCD00F0E94D /* XibPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XibPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */,
-				FC10F55F1E24003D00226AE8 /* WheelChoiceCellxib */,
+				FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */,
 			);
 			name = WheelChoice;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				FCEB55011E1D9CDB00F0E94D /* SliderView.xib in Resources */,
 				FCEB54DA1E1D9CCD00F0E94D /* Assets.xcassets in Resources */,
 				FCEB54D51E1D9CCD00F0E94D /* Main.storyboard in Resources */,
-				FC10F5601E24003D00226AE8 /* WheelChoiceCellxib in Resources */,
+				FC10F5601E24003D00226AE8 /* WheelChoiceCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
