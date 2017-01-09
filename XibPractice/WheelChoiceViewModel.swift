@@ -15,6 +15,7 @@ class WheelChoiceViewModel {
 	var placeholder: String = "" 
 	var indexes: [Int] = []
 	var choices: [[String]] = []
+	
 	var decimalAfterPosition: Int? = nil
 	var update: ([Int]) -> Void = { _ in }
 	var choice: String {
@@ -36,5 +37,9 @@ class WheelChoiceViewModel {
 		self.placeholder = placeholder
 		self.choices = choices
 		self.decimalAfterPosition = decimalAfterPosition
+	}
+	
+	init() {
+		
 	}
 }

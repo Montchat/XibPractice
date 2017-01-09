@@ -22,6 +22,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		tableView.delegate = self ; tableView.dataSource = self
+		tableView.tableFooterView = UIView() 
 		
 		sliderView.config(with: testModel)
 		
