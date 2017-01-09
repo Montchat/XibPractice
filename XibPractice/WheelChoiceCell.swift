@@ -19,6 +19,7 @@ class WheelChoiceCell: UITableViewCell {
 	@IBOutlet weak var selection: UIButton!
 	
 	var pickerView:UIPickerView?
+	var headerBar: UIView?
 	
 	@IBAction func questionPressed(_ sender: Any) {
 		print("question mark pressed")
@@ -29,33 +30,58 @@ class WheelChoiceCell: UITableViewCell {
 		print("selection changed")
 		
 		if pickerView == nil {
-
-			backgroundColor = UIColor.red
-			view.backgroundColor = UIColor.green
 			
-//			startFrame.origin.y = frame.height
-//			endFrame.origin.y = startFrame.origin.y - endFrame.height
-//			
-			let pickerView = UIPickerView(frame: view.frame)
+			var startFrame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: 0)
+			let headerBarEndFrame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: 43.3)
+			let pickerViewEndFrame = CGRect(x: 0, y: view.frame.maxY, width: view.frame.width, height: 150)
+			
+			startFrame.origin.y = frame.height
+			
+			let headerBar = UIView(frame:startFrame)
+			headerBar.layer.borderWidth = 0.50
+			headerBar.layer.masksToBounds = true
+			
+			headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
+			
+			let pickerView = UIPickerView(frame:startFrame)
+			
 			pickerView.delegate = self ; pickerView.dataSource = self
+			
+			let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
+			cancelButton.setTitle("Cancel", for: .normal)
+			
+			pickerView.addSubview(cancelButton)
+			
+			let addButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
+			addButton.setTitle("Ok", for: .normal)
+			
+			headerBar.addSubview(cancelButton)
+			headerBar.addSubview(addButton)
+			
+			addSubview(headerBar)
+			
 			addSubview(pickerView)
 			
 			self.pickerView = pickerView
-//
-//			UIView.animate(withDuration: 0.33, animations: {
-//
-//				print(pickerView.frame)
-//				
-//			}, completion: { (bool) in
-//				
-//				print("completed")
-//				
-//			})
+			self.headerBar = headerBar
+
+			UIView.animate(withDuration: 0.33, animations: {
+				
+				headerBar.frame = headerBarEndFrame
+				pickerView.frame = pickerViewEndFrame
+				
+			}, completion: { (bool) in
+				
+			})
 			
 		} else {
 			
 			guard let pickerView = self.pickerView else { return }
+			guard let headerBar = self.headerBar else { return }
 			pickerView.removeFromSuperview()
+			headerBar.removeFromSuperview()
+			self.pickerView = nil
+			self.headerBar = nil
 			
 		}
 		
