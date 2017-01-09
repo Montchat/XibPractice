@@ -12,12 +12,12 @@ class ViewController: UIViewController {
 
 	let testModel = SliderChoiceViewModel(with: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 	
-	@IBOutlet weak var sliderView: SliderView!
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		let sliderView = SliderView.create()
 		
 		sliderView.config(with: testModel)
+		view.addSubview(sliderView)
 	}
 
 	

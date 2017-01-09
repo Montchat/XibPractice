@@ -9,21 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderView" customModule="XibPractice" customModuleProvider="target">
-            <connections>
-                <outlet property="level" destination="SYT-QF-JxF" id="Vga-es-Fry"/>
-                <outlet property="maxValue" destination="TjM-AO-UxX" id="YAu-rc-cRH"/>
-                <outlet property="medianValue" destination="iDf-QY-n2T" id="22r-V4-8RO"/>
-                <outlet property="minValue" destination="hmD-jV-azE" id="WcS-of-5gF"/>
-                <outlet property="question" destination="XyS-oT-Utw" id="icf-xV-Ed2"/>
-                <outlet property="slider" destination="7Ca-yA-ZhH" id="DZB-oc-5RR"/>
-                <outlet property="sliderView" destination="o4w-Ot-iIX" id="gbi-5c-FAU"/>
-                <outletCollection property="values" destination="hmD-jV-azE" collectionClass="NSMutableArray" id="xcF-71-etD"/>
-                <outletCollection property="values" destination="TjM-AO-UxX" collectionClass="NSMutableArray" id="Pi6-23-sRe"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="o4w-Ot-iIX">
+        <view contentMode="scaleToFill" id="o4w-Ot-iIX" customClass="SliderView" customModule="XibPractice" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -46,12 +34,6 @@
                         <constraint firstAttribute="height" constant="1" id="35J-EO-OEN"/>
                     </constraints>
                 </view>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-yA-ZhH">
-                    <rect key="frame" x="10" y="65" width="355" height="31"/>
-                    <connections>
-                        <action selector="slide:" destination="-1" eventType="valueChanged" id="JfA-yi-WX9"/>
-                    </connections>
-                </slider>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MINVALUE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmD-jV-azE">
                     <rect key="frame" x="12" y="116" width="51.5" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -70,6 +52,12 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Ca-yA-ZhH">
+                    <rect key="frame" x="10" y="65" width="355" height="31"/>
+                    <connections>
+                        <action selector="slide:" destination="o4w-Ot-iIX" eventType="valueChanged" id="wn8-dt-2wN"/>
+                    </connections>
+                </slider>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -94,6 +82,17 @@
                 <constraint firstItem="SYT-QF-JxF" firstAttribute="top" secondItem="o4w-Ot-iIX" secondAttribute="top" constant="12" id="xKW-wD-agb"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="level" destination="SYT-QF-JxF" id="J3d-Ay-KnI"/>
+                <outlet property="maxValue" destination="TjM-AO-UxX" id="1C5-09-xvf"/>
+                <outlet property="medianValue" destination="iDf-QY-n2T" id="eSs-SF-Q7G"/>
+                <outlet property="minValue" destination="hmD-jV-azE" id="tZa-nE-fFc"/>
+                <outlet property="question" destination="XyS-oT-Utw" id="EL7-AU-9DV"/>
+                <outlet property="slider" destination="7Ca-yA-ZhH" id="QW8-tV-cUR"/>
+                <outletCollection property="values" destination="hmD-jV-azE" collectionClass="NSMutableArray" id="sfg-yt-c7s"/>
+                <outletCollection property="values" destination="iDf-QY-n2T" collectionClass="NSMutableArray" id="1am-X0-hYK"/>
+                <outletCollection property="values" destination="TjM-AO-UxX" collectionClass="NSMutableArray" id="fJK-NC-g5w"/>
+            </connections>
             <point key="canvasLocation" x="-349" y="-306"/>
         </view>
     </objects>

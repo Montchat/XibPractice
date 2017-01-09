@@ -12,7 +12,6 @@ final class SliderView: UIView {
 	
 	var model:SliderChoiceViewModel = SliderChoiceViewModel()
 	
-	@IBOutlet var sliderView: UIView!
 	@IBOutlet weak var question: UILabel!
 	@IBOutlet weak var level: UILabel!
 
@@ -35,9 +34,17 @@ final class SliderView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		guard let sliderView = Bundle.main.loadNibNamed("SliderView", owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
+	}
+	
+	
+	init() {
 		
-		addSubview(sliderView)
+		Bundle.main.loadNibNamed("SliderView", owner: nil, options: nil)?.first as! SliderView
+		
+	}
+	
+	static func create() -> SliderView {
+		return Bundle.main.loadNibNamed("SliderView", owner: nil, options: nil)?.first as! SliderView
 		
 	}
 	
