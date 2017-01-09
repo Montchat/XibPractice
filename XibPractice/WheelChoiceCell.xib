@@ -14,8 +14,67 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfv-Ji-UCh">
+                    <rect key="frame" x="16" y="12" width="66.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrv-GQ-EnF">
+                    <rect key="frame" x="232" y="11.5" width="71.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionSm" translatesAutoresizingMaskIntoConstraints="NO" id="sBP-BL-N6J">
+                    <rect key="frame" x="85.5" y="11" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="DEL-eZ-Qu5"/>
+                        <constraint firstAttribute="height" constant="22" id="m5Y-iH-hEP"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mH2-Ys-fKM">
+                    <rect key="frame" x="187" y="2" width="1" height="42"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="RMZ-9C-aWm"/>
+                        <constraint firstAttribute="width" constant="1" id="fe6-tU-hzL"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Z-pN-TdW">
+                    <rect key="frame" x="188" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="iEm-QK-Eap"/>
+                        <constraint firstAttribute="width" constant="44" id="qia-Yz-geZ"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="delete"/>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sBP-BL-N6J" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2UC-4u-XQz"/>
+                <constraint firstAttribute="bottom" secondItem="D3Z-pN-TdW" secondAttribute="bottom" id="89C-L0-Yak"/>
+                <constraint firstItem="Jrv-GQ-EnF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8rL-KL-Adl"/>
+                <constraint firstItem="D3Z-pN-TdW" firstAttribute="leading" secondItem="mH2-Ys-fKM" secondAttribute="trailing" id="8rT-qz-B2r"/>
+                <constraint firstItem="Jrv-GQ-EnF" firstAttribute="leading" secondItem="D3Z-pN-TdW" secondAttribute="trailing" id="LOn-XQ-BLl"/>
+                <constraint firstItem="Nfv-Ji-UCh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="UgR-St-2UL"/>
+                <constraint firstItem="sBP-BL-N6J" firstAttribute="leading" secondItem="Nfv-Ji-UCh" secondAttribute="trailing" constant="3" id="dCF-jC-p3a"/>
+                <constraint firstItem="Nfv-Ji-UCh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dyy-Et-s5N"/>
+                <constraint firstAttribute="bottom" secondItem="mH2-Ys-fKM" secondAttribute="bottom" id="gMM-A9-ILo"/>
+                <constraint firstItem="mH2-Ys-fKM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oL4-JB-3jP"/>
+                <constraint firstItem="D3Z-pN-TdW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vzb-p7-Xfm"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="28.5" y="50"/>
         </view>
+        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="19O-bx-D8y">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+        </imageView>
     </objects>
+    <resources>
+        <image name="delete" width="44" height="44"/>
+        <image name="questionSm" width="22" height="22"/>
+    </resources>
 </document>
