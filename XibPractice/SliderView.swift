@@ -8,10 +8,11 @@
 
 import UIKit
 
-class SliderView: UIView {
+final class SliderView: UIView {
 	
 	var model:SliderChoiceViewModel = SliderChoiceViewModel()
 	
+	@IBOutlet var sliderView: UIView!
 	@IBOutlet weak var question: UILabel!
 	@IBOutlet weak var level: UILabel!
 
@@ -24,6 +25,7 @@ class SliderView: UIView {
 	@IBOutlet var values: [UILabel]! // min == 0, median == 1, max == 2
 	
 	@IBAction func slide(_ sender: UISlider) {
+		
 		let intValue = Int(slider.value)
 		level.text = "Level: \(intValue)"
 		model.level = Int(intValue)
@@ -33,7 +35,9 @@ class SliderView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		fromNib()
+		guard let sliderView = Bundle.main.loadNibNamed("SliderView", owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
+		
+		addSubview(sliderView)
 		
 	}
 	
@@ -42,8 +46,8 @@ class SliderView: UIView {
 		slider.maximumValue = 10
 		slider.thumbTintColor = UIColor.tapDodgerBlue
 		
-		slider.maximumTrackTintColor = UIColor.black
-		slider.minimumTrackTintColor = UIColor.blue
+		slider.maximumTrackTintColor = UIColor.tapGunmetal
+		slider.minimumTrackTintColor = UIColor.tapDodgerBlue
 		
 		for value in values { value.textColor = UIColor.tapGunmetal }
 
@@ -52,6 +56,7 @@ class SliderView: UIView {
 		self.maxValue.text = model.maxValue
 		
 		if medianValue != nil { self.medianValue.text = model.medianValue }
+			
 		else { self.medianValue.alpha = 0 }
 		
 	}

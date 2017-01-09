@@ -18,8 +18,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		sliderView.config(with: testModel)
-		
 	}
 
+	
 }
-
