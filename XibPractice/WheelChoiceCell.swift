@@ -10,6 +10,13 @@ import UIKit
 
 class WheelChoiceCell: UITableViewCell {
 
+	@IBOutlet weak var property: UILabel!
+	@IBOutlet weak var selection: UILabel!
+	
+	@IBAction func changeSelection(_ sender: Any) {
+	}
+	
+	
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

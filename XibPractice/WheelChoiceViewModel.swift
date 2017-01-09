@@ -9,8 +9,8 @@
 import Foundation
 
 
-class WheelChoiceViewModel
-{
+class WheelChoiceViewModel {
+	
 	var title: String = ""
 	var indexes: [Int] = []
 	var choices: [[String]] = []
