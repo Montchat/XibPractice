@@ -11,12 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
 	@IBOutlet weak var sliderView: SliderView!
+	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var multiChoiceView: MultiChoiceView!
 	
 	let testModel = SliderChoiceViewModel(with: "test question", minValue: "0", medianValue: "5", maxValue: "10")
-	
 	let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "Add color", choices: [["red", "yellow", "blue"]], decimalAfterPosition: nil)
-	
-	@IBOutlet weak var tableView: UITableView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
