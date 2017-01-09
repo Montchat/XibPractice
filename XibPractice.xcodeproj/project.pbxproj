@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC10F55D1E24001B00226AE8 /* WheelChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */; };
+		FC10F5601E24003D00226AE8 /* WheelChoiceCellxib in Resources */ = {isa = PBXBuildFile; fileRef = FC10F55F1E24003D00226AE8 /* WheelChoiceCellxib */; };
 		FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Component.swift */; };
 		FC7D6A401E1EAA7A0080E88C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */; };
 		FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelChoiceViewModel.swift; sourceTree = "<group>"; };
+		FC10F55F1E24003D00226AE8 /* WheelChoiceCellxib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = WheelChoiceCellxib; sourceTree = "<group>"; };
 		FC7D6A391E1EA55A0080E88C /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FCEB54CC1E1D9CCD00F0E94D /* XibPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XibPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC10F55E1E24002B00226AE8 /* WheelChoice */ = {
+			isa = PBXGroup;
+			children = (
+				FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */,
+				FC10F55F1E24003D00226AE8 /* WheelChoiceCellxib */,
+			);
+			name = WheelChoice;
+			sourceTree = "<group>";
+		};
 		FC7D6A3B1E1EA6780080E88C /* SliderView */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +201,7 @@
 			children = (
 				FC7D6A391E1EA55A0080E88C /* Component.swift */,
 				FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */,
+				FC10F55E1E24002B00226AE8 /* WheelChoice */,
 				FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */,
 				FC7D6A3B1E1EA6780080E88C /* SliderView */,
 				FC7D6A3D1E1EA6A00080E88C /* YesNoView */,
@@ -309,6 +323,7 @@
 				FCEB55011E1D9CDB00F0E94D /* SliderView.xib in Resources */,
 				FCEB54DA1E1D9CCD00F0E94D /* Assets.xcassets in Resources */,
 				FCEB54D51E1D9CCD00F0E94D /* Main.storyboard in Resources */,
+				FC10F5601E24003D00226AE8 /* WheelChoiceCellxib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +357,7 @@
 				FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
 				FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */,
+				FC10F55D1E24001B00226AE8 /* WheelChoiceViewModel.swift in Sources */,
 				FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */,
 				FCEB550C1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift in Sources */,
 			);
