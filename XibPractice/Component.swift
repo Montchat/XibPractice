@@ -13,6 +13,6 @@ class Component {
 	static var sliderView:String = "SliderView"
 	static var yesNoView:String = "YesNoView"
 	static var multiChoiceView:String = "MultiChoiceView"
-	
+	static var wheelChoiceCell:String = "WheelChoiceCell"
 	
 }

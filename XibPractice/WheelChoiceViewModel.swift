@@ -12,6 +12,7 @@ import Foundation
 class WheelChoiceViewModel {
 	
 	var title: String = ""
+	var placeholder: String = "" 
 	var indexes: [Int] = []
 	var choices: [[String]] = []
 	var decimalAfterPosition: Int? = nil
@@ -30,8 +31,9 @@ class WheelChoiceViewModel {
 		return String(result.characters.dropLast())
 	}
 
-	init(title: String, choices: [[String]], decimalAfterPosition: Int? = nil) {
+	init(title: String, placeholder: String, choices: [[String]], decimalAfterPosition: Int? = nil) {
 		self.title = title
+		self.placeholder = placeholder
 		self.choices = choices
 		self.decimalAfterPosition = decimalAfterPosition
 	}

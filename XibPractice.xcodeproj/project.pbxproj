@@ -103,9 +103,9 @@
 		FC10F55E1E24002B00226AE8 /* WheelChoice */ = {
 			isa = PBXGroup;
 			children = (
-				FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */,
 				FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */,
 				FCE9D8471E2401F200424580 /* WheelChoiceCell.swift */,
+				FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */,
 			);
 			name = WheelChoice;
 			sourceTree = "<group>";
@@ -113,6 +113,7 @@
 		FC7D6A3B1E1EA6780080E88C /* SliderView */ = {
 			isa = PBXGroup;
 			children = (
+				FCEB55001E1D9CDB00F0E94D /* SliderView.xib */,
 				FCEB55041E1DA50000F0E94D /* SliderView.swift */,
 				FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */,
 			);
@@ -175,7 +176,6 @@
 				FC7D6A3E1E1EA76B0080E88C /* System */,
 				FCEB54D11E1D9CCD00F0E94D /* ViewController.swift */,
 				FCEB54D31E1D9CCD00F0E94D /* Main.storyboard */,
-				FCEB55001E1D9CDB00F0E94D /* SliderView.xib */,
 				FCEB550E1E1DB23D00F0E94D /* Components */,
 			);
 			path = XibPractice;
