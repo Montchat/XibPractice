@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 	
 	let testModel = SliderChoiceViewModel(with: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 	let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "Add color", choices: [["red", "yellow", "blue"]], decimalAfterPosition: nil)
-	let multiChoiceModel = MultiChoiceViewModel(with: "What are you doing?", index: nil, choices: ["Absolutely Nothing"])
+	let multiChoiceModel = MultiChoiceViewModel(with: "What are you doing?", index: nil, choices: ["One Nothing", "Othter Thing"])
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -27,8 +27,15 @@ class ViewController: UIViewController {
 		tableView.tableFooterView = UIView() 
 		
 		multiChoiceView.config(with: multiChoiceModel)
+	
+		multiChoiceModel.update = { index in
+			self.multiChoiceModel.index = index
+			self.multiChoiceView.config(with: self.multiChoiceModel)
+		}
 		
 	}
+	
+	
 	
 }
 

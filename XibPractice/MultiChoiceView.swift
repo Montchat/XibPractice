@@ -28,8 +28,34 @@ class MultiChoiceView: UIView {
 	}
 	
 	func config(with model: MultiChoiceViewModel) {
+		
+		for view in choicesView.subviews { view.removeFromSuperview() }
+		
+		for (index, choice) in model.choices.enumerated() {
+			let button = UIButton(type: .custom)
+			button.tag = index
+			button.setTitle(choice, for: .normal)
+			button.setTitleColor(UIColor.black, for: .normal)
+			button.setImage(#imageLiteral(resourceName: "circleUnchecked"), for: .normal)
+			button.setImage(#imageLiteral(resourceName: "circleChecked"), for: .selected)
+			button.addTarget(self, action: #selector(choose(button:)), for: .touchUpInside)
+			
+			if let select = model.index, select == index {
+				button.isSelected = true
+			}
+			button.sizeToFit()
+			choicesView.addArrangedSubview(button)
+			
+		}
+		
 		self.model = model
 		self.question.text = model.title
+		
+	}
+	
+	func choose(button:UIButton) {
+		print("selected")
+		model.update(button.tag)
 		
 	}
 	
