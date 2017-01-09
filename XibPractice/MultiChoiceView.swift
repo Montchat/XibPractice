@@ -27,4 +27,10 @@ class MultiChoiceView: UIView {
 		
 	}
 	
+	func config(with model: MultiChoiceViewModel) {
+		self.model = model
+		self.question.text = model.title
+		
+	}
+	
 }
