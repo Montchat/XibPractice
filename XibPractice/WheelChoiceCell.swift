@@ -13,7 +13,8 @@ class WheelChoiceCell: UITableViewCell {
 	@IBOutlet var view: UIView!
 
 	@IBOutlet weak var property: UILabel!
-	@IBOutlet weak var selection: UILabel!
+	
+	@IBOutlet weak var selection: UIButton!
 	
 	@IBAction func questionPressed(_ sender: Any) {
 		print("question mark pressed")
@@ -52,8 +53,9 @@ class WheelChoiceCell: UITableViewCell {
 	
 	func config(with model: WheelChoiceViewModel) {
 		property.text = model.title
-		selection.text = model.placeholder
+		selection.setTitle(model.placeholder, for: .normal)
 		
 	}
 	
 }
+

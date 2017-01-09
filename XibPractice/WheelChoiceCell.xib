@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WheelChoiceCell" customModule="XibPractice" customModuleProvider="target">
             <connections>
                 <outlet property="property" destination="Nfv-Ji-UCh" id="d6n-q9-Ijb"/>
-                <outlet property="selection" destination="Jrv-GQ-EnF" id="Rz3-aJ-b04"/>
+                <outlet property="selection" destination="D3Z-pN-TdW" id="aDH-y3-MVa"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RN3-YC-0Q4"/>
             </connections>
         </placeholder>
@@ -23,12 +23,6 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfv-Ji-UCh">
                     <rect key="frame" x="15" y="12" width="66.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrv-GQ-EnF">
-                    <rect key="frame" x="232" y="11.5" width="71.5" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -45,7 +39,6 @@
                     <rect key="frame" x="188" y="0.0" width="44" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="iEm-QK-Eap"/>
-                        <constraint firstAttribute="width" constant="44" id="qia-Yz-geZ"/>
                     </constraints>
                     <state key="normal" image="add"/>
                     <connections>
@@ -63,9 +56,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="D3Z-pN-TdW" secondAttribute="bottom" id="89C-L0-Yak"/>
-                <constraint firstItem="Jrv-GQ-EnF" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8rL-KL-Adl"/>
                 <constraint firstItem="D3Z-pN-TdW" firstAttribute="leading" secondItem="mH2-Ys-fKM" secondAttribute="trailing" id="8rT-qz-B2r"/>
-                <constraint firstItem="Jrv-GQ-EnF" firstAttribute="leading" secondItem="D3Z-pN-TdW" secondAttribute="trailing" id="LOn-XQ-BLl"/>
                 <constraint firstItem="Nfv-Ji-UCh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="UgR-St-2UL"/>
                 <constraint firstItem="mUM-MN-WLe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vpi-QY-DuO"/>
                 <constraint firstItem="mUM-MN-WLe" firstAttribute="leading" secondItem="Nfv-Ji-UCh" secondAttribute="trailing" constant="3.5" id="cOh-kJ-Ffm"/>
