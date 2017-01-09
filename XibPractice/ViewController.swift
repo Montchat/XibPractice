@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	@IBOutlet weak var sliderView: SliderView!
+	
 	let testModel = SliderChoiceViewModel(with: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		let sliderView = SliderView.create()
 		
 		sliderView.config(with: testModel)
-		view.addSubview(sliderView)
+		
 	}
-
 	
 }
