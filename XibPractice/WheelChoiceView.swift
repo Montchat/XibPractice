@@ -37,17 +37,12 @@ class WheelChoiceView: UIView  {
 		
 	}
 	
-    override func awakeFromNib() {
-        super.awakeFromNib()
-		
-    }
-	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		height.constant = 0
-		
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else {  return }
+		
+		height.constant = 0
 		
 		addSubview(wheelChoiceView)
 		
