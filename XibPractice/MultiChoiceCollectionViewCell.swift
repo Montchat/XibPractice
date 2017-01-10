@@ -21,4 +21,9 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 		
 	}
 	
+	func configure(with choice:String) {
+		
+		
+	}
+	
 }

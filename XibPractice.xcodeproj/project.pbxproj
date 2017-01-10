@@ -108,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC0C6BBB1E25853C000E6A71 /* MultiChoiceViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FC0C6BB71E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib */,
+				FC0C6BB91E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift */,
+			);
+			name = MultiChoiceViewCell;
+			sourceTree = "<group>";
+		};
 		FC10F55E1E24002B00226AE8 /* WheelChoice */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				FCE9D8491E24349C00424580 /* MultiChoiceView.xib */,
-				FC0C6BB71E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib */,
-				FC0C6BB91E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift */,
 				FCE9D84B1E2436E500424580 /* MultiChoiceView.swift */,
 				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
 			);
@@ -218,6 +225,7 @@
 				FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */,
 				FC10F55E1E24002B00226AE8 /* WheelChoice */,
 				FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */,
+				FC0C6BBB1E25853C000E6A71 /* MultiChoiceViewCell */,
 				FC7D6A3B1E1EA6780080E88C /* SliderView */,
 				FC7D6A3D1E1EA6A00080E88C /* YesNoView */,
 			);

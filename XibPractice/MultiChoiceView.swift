@@ -78,7 +78,9 @@ extension MultiChoiceView : UICollectionViewDelegate {
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+		guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MultiChoiceCollectionViewCell", for: indexPath) as? MultiChoiceCollectionViewCell else { return UICollectionViewCell() }
+		
+		collectionViewCell.configure(with: model.choices[indexPath.row])
 		
 		return collectionViewCell 
 	}
