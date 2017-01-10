@@ -22,6 +22,9 @@ class MultiChoiceView: UIView {
 		super.init(coder: aDecoder)
 		
 		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
+		choicesView.alignment = .leading
+		choicesView.axis = .horizontal
+		choicesView.distribution = .fillEqually
 		
 		addSubview(sliderView)
 		
@@ -32,6 +35,7 @@ class MultiChoiceView: UIView {
 		for view in choicesView.subviews { view.removeFromSuperview() }
 		
 		for (index, choice) in model.choices.enumerated() {
+			
 			let button = UIButton(type: .custom)
 			button.tag = index
 			button.setTitle(choice, for: .normal)
@@ -43,6 +47,7 @@ class MultiChoiceView: UIView {
 			if let select = model.index, select == index {
 				button.isSelected = true
 			}
+			
 			button.sizeToFit()
 			choicesView.addArrangedSubview(button)
 			
@@ -54,7 +59,6 @@ class MultiChoiceView: UIView {
 	}
 	
 	func choose(button:UIButton) {
-		print("selected")
 		model.update(button.tag)
 		
 	}
