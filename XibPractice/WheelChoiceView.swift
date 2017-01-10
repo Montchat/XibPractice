@@ -74,6 +74,7 @@ class WheelChoiceView: UIView  {
 extension WheelChoiceView : UIPickerViewDelegate {
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		print("selected")
+		
 	}
 }
 
