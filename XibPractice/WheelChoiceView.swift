@@ -29,6 +29,8 @@ class WheelChoiceView: UIView  {
 	@IBAction func changeSelection(_ sender: Any) {
 		let constant:CGFloat
 		
+		
+		
 		switch height.constant {
 			case 100:
 			constant = 0
@@ -37,9 +39,11 @@ class WheelChoiceView: UIView  {
 			
 		}
 		
+		view.layoutIfNeeded()
 		UIView.animate(withDuration: 0.33) {
-			self.layoutIfNeeded()
 			self.height.constant = constant
+			self.view.layoutIfNeeded()
+			
 		}
 		
 	}
@@ -76,11 +80,11 @@ extension WheelChoiceView : UIPickerViewDelegate {
 extension WheelChoiceView : UIPickerViewDataSource {
 	
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		return 3
+		return model.choices[component].count
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return "test"
+		return model.choices[component][row]
 
 	}
 	
