@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0C6BB81E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0C6BB71E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib */; };
+		FC0C6BBA1E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C6BB91E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift */; };
 		FC10F55D1E24001B00226AE8 /* WheelChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */; };
 		FC10F5601E24003D00226AE8 /* WheelChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */; };
 		FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Component.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC0C6BB71E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiChoiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		FC0C6BB91E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiChoiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelChoiceViewModel.swift; sourceTree = "<group>"; };
 		FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WheelChoiceCell.xib; sourceTree = "<group>"; };
 		FC7D6A391E1EA55A0080E88C /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				FCE9D8491E24349C00424580 /* MultiChoiceView.xib */,
+				FC0C6BB71E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib */,
+				FC0C6BB91E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift */,
 				FCE9D84B1E2436E500424580 /* MultiChoiceView.swift */,
 				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
 			);
@@ -331,6 +337,7 @@
 				FCEB54DD1E1D9CCD00F0E94D /* LaunchScreen.storyboard in Resources */,
 				FCEB55011E1D9CDB00F0E94D /* SliderView.xib in Resources */,
 				FCEB54DA1E1D9CCD00F0E94D /* Assets.xcassets in Resources */,
+				FC0C6BB81E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib in Resources */,
 				FCEB54D51E1D9CCD00F0E94D /* Main.storyboard in Resources */,
 				FC10F5601E24003D00226AE8 /* WheelChoiceCell.xib in Resources */,
 				FCE9D84A1E24349C00424580 /* MultiChoiceView.xib in Resources */,
@@ -359,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCEB550D1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift in Sources */,
+				FC0C6BBA1E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift in Sources */,
 				FCEB54D81E1D9CCD00F0E94D /* XibPractice.xcdatamodeld in Sources */,
 				FC7D6A401E1EAA7A0080E88C /* UIViewExtension.swift in Sources */,
 				FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */,

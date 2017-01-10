@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WheelChoiceCell" customModule="XibPractice" customModuleProvider="target">
             <connections>
+                <outlet property="height" destination="DFl-c1-LHY" id="gWO-Yr-gKm"/>
+                <outlet property="pickerView" destination="y9h-Vl-stB" id="Wwc-wW-kZM"/>
                 <outlet property="property" destination="Nfv-Ji-UCh" id="d6n-q9-Ijb"/>
                 <outlet property="selection" destination="D3Z-pN-TdW" id="aDH-y3-MVa"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RN3-YC-0Q4"/>
@@ -18,11 +20,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Property" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfv-Ji-UCh">
-                    <rect key="frame" x="15" y="12" width="66.5" height="21"/>
+                    <rect key="frame" x="15" y="12" width="66.5" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -48,29 +50,36 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUM-MN-WLe">
-                    <rect key="frame" x="85" y="0.0" width="22" height="44"/>
+                    <rect key="frame" x="85" y="0.0" width="22" height="43.5"/>
                     <state key="normal" image="questionSm"/>
                     <connections>
                         <action selector="questionPressed:" destination="-1" eventType="touchUpInside" id="5Ka-eM-TMo"/>
                     </connections>
                 </button>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9h-Vl-stB">
+                    <rect key="frame" x="0.0" y="44" width="375" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="DFl-c1-LHY"/>
+                    </constraints>
+                </pickerView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="D3Z-pN-TdW" secondAttribute="bottom" id="89C-L0-Yak"/>
+                <constraint firstItem="mUM-MN-WLe" firstAttribute="centerY" secondItem="Nfv-Ji-UCh" secondAttribute="centerY" id="0Ez-lj-qdU"/>
+                <constraint firstItem="Nfv-Ji-UCh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="7lC-uc-gPn"/>
                 <constraint firstItem="D3Z-pN-TdW" firstAttribute="leading" secondItem="mH2-Ys-fKM" secondAttribute="trailing" id="8rT-qz-B2r"/>
+                <constraint firstItem="y9h-Vl-stB" firstAttribute="top" secondItem="D3Z-pN-TdW" secondAttribute="bottom" id="R1P-UA-VoA"/>
                 <constraint firstItem="Nfv-Ji-UCh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="UgR-St-2UL"/>
-                <constraint firstItem="mUM-MN-WLe" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Vpi-QY-DuO"/>
                 <constraint firstItem="mUM-MN-WLe" firstAttribute="leading" secondItem="Nfv-Ji-UCh" secondAttribute="trailing" constant="3.5" id="cOh-kJ-Ffm"/>
-                <constraint firstItem="Nfv-Ji-UCh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dyy-Et-s5N"/>
-                <constraint firstAttribute="bottom" secondItem="mH2-Ys-fKM" secondAttribute="bottom" id="gMM-A9-ILo"/>
                 <constraint firstItem="mUM-MN-WLe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hSt-No-LNU"/>
-                <constraint firstAttribute="bottom" secondItem="mUM-MN-WLe" secondAttribute="bottom" id="lXB-bh-ht4"/>
                 <constraint firstItem="mH2-Ys-fKM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oL4-JB-3jP"/>
+                <constraint firstItem="mH2-Ys-fKM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="rdm-yc-uKd"/>
+                <constraint firstAttribute="trailing" secondItem="y9h-Vl-stB" secondAttribute="trailing" id="s7X-bP-R15"/>
+                <constraint firstItem="y9h-Vl-stB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sga-5F-wid"/>
                 <constraint firstItem="D3Z-pN-TdW" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vzb-p7-Xfm"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="28.5" y="50"/>
+            <point key="canvasLocation" x="34.5" y="190"/>
         </view>
     </objects>
     <resources>

@@ -28,6 +28,8 @@ class MultiChoiceView: UIView {
 	
 	func config(with model: MultiChoiceViewModel) {
 		
+		choicesView.delegate = self ; choicesView.dataSource = self
+		
 		for view in choicesView.subviews { view.removeFromSuperview() }
 		
 		for (index, choice) in model.choices.enumerated() {
@@ -72,11 +74,13 @@ extension MultiChoiceView : UICollectionViewDataSource {
 	}
 	
 }
-extension MultiChoiceView : UICollectionViewDataSource {
+extension MultiChoiceView : UICollectionViewDelegate {
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		return UICollectionViewCell()
+		let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+		
+		return collectionViewCell 
 	}
 
 }
