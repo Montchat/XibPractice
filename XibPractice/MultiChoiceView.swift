@@ -88,3 +88,15 @@ extension MultiChoiceView : UICollectionViewDelegate {
 	}
 
 }
+
+extension MultiChoiceView : UICollectionViewDelegateFlowLayout {
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+		let width = collectionView.bounds.size.width / CGFloat(model.choices.count)
+		let height = collectionView.bounds.size.height
+		
+		return CGSize(width: width, height: height)
+		
+	}
+	
+}
