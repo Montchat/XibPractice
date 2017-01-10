@@ -22,9 +22,10 @@ class MultiChoiceView: UIView {
 		super.init(coder: aDecoder)
 		
 		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
-		choicesView.alignment = .leading
+		choicesView.alignment = .fill
 		choicesView.axis = .horizontal
-		choicesView.distribution = .fillEqually
+		choicesView.distribution = .equalSpacing
+		choicesView.isLayoutMarginsRelativeArrangement = true
 		
 		addSubview(sliderView)
 		
