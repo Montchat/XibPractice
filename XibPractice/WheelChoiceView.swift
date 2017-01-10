@@ -62,13 +62,13 @@ class WheelChoiceView: UIView  {
 	
 }
 
-extension WheelChoiceCell : UIPickerViewDelegate {
+extension WheelChoiceView : UIPickerViewDelegate {
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		print("selected")
 	}
 }
 
-extension WheelChoiceCell : UIPickerViewDataSource {
+extension WheelChoiceView : UIPickerViewDataSource {
 	
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		return 3

@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		sliderView.config(with: testModel)
-		wheelChoiceView.configure(with:wheelChoiceModel)
+		wheelChoiceView.config(with: wheelChoiceModel)
 		multiChoiceView.config(with: multiChoiceModel)
 		
 	}
