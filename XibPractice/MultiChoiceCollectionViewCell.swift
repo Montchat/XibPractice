@@ -15,6 +15,7 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	static var identifier = "MultiChoiceCollectionViewCell"
 	
 	@IBAction func buttonPressed(_ sender: Any) {
+		button.isSelected = !button.isSelected
 		
 	}
 	
@@ -27,13 +28,6 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 		button.setTitle(choice, for: .normal)
 		button.setImage(#imageLiteral(resourceName: "circleUnchecked"), for: .normal)
 		button.setImage(#imageLiteral(resourceName: "circleChecked"), for: .selected)
-		button.addTarget(self, action: #selector(choose(button:)), for: .touchUpInside)
-		
-	}
-	
-	func choose(button:UIButton) {
-
-		button.isSelected = !button.isSelected
 		
 	}
 	
