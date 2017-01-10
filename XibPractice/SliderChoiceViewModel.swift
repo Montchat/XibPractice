@@ -18,11 +18,13 @@ class SliderChoiceViewModel {
 	
 	var level:Int = 0
 	
+	var update: (Int) -> Void = { _ in }
+	
 	init() {
 		
 	}
 	
-	init(with question:String, minValue:String, medianValue:String, maxValue:String) {
+	init(question:String, minValue:String, medianValue:String, maxValue:String) {
 		
 		self.question = question
 		self.minValue = minValue

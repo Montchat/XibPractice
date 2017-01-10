@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WheelChoiceCell" customModule="XibPractice" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
             <connections>
                 <outlet property="height" destination="DFl-c1-LHY" id="gWO-Yr-gKm"/>
                 <outlet property="pickerView" destination="y9h-Vl-stB" id="Wwc-wW-kZM"/>

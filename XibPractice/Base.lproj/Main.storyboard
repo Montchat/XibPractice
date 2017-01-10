@@ -21,55 +21,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoR-Mh-kFy" customClass="SliderView" customModule="XibPractice" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="375" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pfw-xs-6ZJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PoR-Mh-kFy" customClass="SliderView" customModule="XibPractice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mU-43-crQ" customClass="WheelChoiceView" customModule="XibPractice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="391"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdf-KL-L0d" customClass="MultiChoiceView" customModule="XibPractice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="519" width="375" height="128"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="zHJ-Gk-JZM"/>
+                                    <constraint firstItem="7mU-43-crQ" firstAttribute="top" secondItem="Pfw-xs-6ZJ" secondAttribute="top" constant="128" id="F9N-tc-SdQ"/>
+                                    <constraint firstItem="7mU-43-crQ" firstAttribute="centerY" secondItem="Pfw-xs-6ZJ" secondAttribute="centerY" id="XnY-Id-EMD"/>
                                 </constraints>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q4b-S8-UsG">
-                                <rect key="frame" x="0.0" y="156" width="375" height="209"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="209" id="IVZ-NK-QTE"/>
-                                </constraints>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="CpO-x9-okw" customClass="WheelChoiceCell" customModule="XibPractice" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CpO-x9-okw" id="NRT-ep-nfZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pdf-KL-L0d" customClass="MultiChoiceView" customModule="XibPractice" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="373" width="375" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="h6d-dp-FhA"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pdf-KL-L0d" firstAttribute="top" secondItem="Q4b-S8-UsG" secondAttribute="bottom" constant="8" id="Iho-Zd-xN4"/>
-                            <constraint firstItem="PoR-Mh-kFy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JNZ-NI-8Ue"/>
-                            <constraint firstAttribute="trailing" secondItem="PoR-Mh-kFy" secondAttribute="trailing" id="NRN-TV-B30"/>
-                            <constraint firstAttribute="trailing" secondItem="Q4b-S8-UsG" secondAttribute="trailing" id="Nlh-6H-cMa"/>
-                            <constraint firstItem="Q4b-S8-UsG" firstAttribute="top" secondItem="PoR-Mh-kFy" secondAttribute="bottom" constant="8" id="SfE-ta-xtx"/>
-                            <constraint firstItem="PoR-Mh-kFy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="b0M-s6-yxX"/>
-                            <constraint firstAttribute="trailing" secondItem="pdf-KL-L0d" secondAttribute="trailing" id="cGI-DC-4bH"/>
-                            <constraint firstItem="Q4b-S8-UsG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tOg-dd-PWr"/>
-                            <constraint firstItem="pdf-KL-L0d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xqS-bB-aq2"/>
+                            <constraint firstAttribute="trailing" secondItem="Pfw-xs-6ZJ" secondAttribute="trailing" id="4Fi-AZ-J7e"/>
+                            <constraint firstItem="Pfw-xs-6ZJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="foT-wf-AsO"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Pfw-xs-6ZJ" secondAttribute="bottom" id="gLf-VC-qND"/>
+                            <constraint firstItem="Pfw-xs-6ZJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="q0n-P7-0ok"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="multiChoiceView" destination="pdf-KL-L0d" id="6Lb-Pg-GfK"/>
                         <outlet property="sliderView" destination="PoR-Mh-kFy" id="0qJ-f3-YsR"/>
-                        <outlet property="tableView" destination="Q4b-S8-UsG" id="0sT-ZL-ggr"/>
+                        <outlet property="wheelChoiceView" destination="7mU-43-crQ" id="Q54-ev-OHu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

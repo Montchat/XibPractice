@@ -36,8 +36,7 @@ final class SliderView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		guard let sliderView = Bundle.main.loadNibNamed(Component.sliderView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
-		
+		guard let sliderView = Bundle.main.loadNibNamed(Component.sliderView, owner: self, options: nil)?[0] as? UIView else { return }
 		addSubview(sliderView)
 		
 	}
@@ -45,8 +44,7 @@ final class SliderView: UIView {
 	override init(frame:CGRect) {
 		super.init(frame: frame)
 		
-		guard let sliderView = Bundle.main.loadNibNamed(Component.sliderView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
-		
+		guard let sliderView = Bundle.main.loadNibNamed(Component.sliderView, owner: self, options: nil)?[0] as? UIView else { return }
 		addSubview(sliderView)
 		
 	}

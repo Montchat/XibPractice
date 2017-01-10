@@ -13,7 +13,7 @@
 		FC10F5601E24003D00226AE8 /* WheelChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */; };
 		FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Component.swift */; };
 		FC7D6A401E1EAA7A0080E88C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */; };
-		FCE9D8481E2401F200424580 /* WheelChoiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D8471E2401F200424580 /* WheelChoiceCell.swift */; };
+		FCE9D8481E2401F200424580 /* WheelChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D8471E2401F200424580 /* WheelChoiceView.swift */; };
 		FCE9D84A1E24349C00424580 /* MultiChoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE9D8491E24349C00424580 /* MultiChoiceView.xib */; };
 		FCE9D84C1E2436E500424580 /* MultiChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D84B1E2436E500424580 /* MultiChoiceView.swift */; };
 		FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB54CF1E1D9CCD00F0E94D /* AppDelegate.swift */; };
@@ -57,7 +57,7 @@
 		FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WheelChoiceCell.xib; sourceTree = "<group>"; };
 		FC7D6A391E1EA55A0080E88C /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		FCE9D8471E2401F200424580 /* WheelChoiceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelChoiceCell.swift; sourceTree = "<group>"; };
+		FCE9D8471E2401F200424580 /* WheelChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelChoiceView.swift; sourceTree = "<group>"; };
 		FCE9D8491E24349C00424580 /* MultiChoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiChoiceView.xib; sourceTree = "<group>"; };
 		FCE9D84B1E2436E500424580 /* MultiChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiChoiceView.swift; sourceTree = "<group>"; };
 		FCEB54CC1E1D9CCD00F0E94D /* XibPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XibPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */,
-				FCE9D8471E2401F200424580 /* WheelChoiceCell.swift */,
+				FCE9D8471E2401F200424580 /* WheelChoiceView.swift */,
 				FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */,
 			);
 			name = WheelChoice;
@@ -383,7 +383,7 @@
 				FCEB54D21E1D9CCD00F0E94D /* ViewController.swift in Sources */,
 				FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */,
 				FCEB54D01E1D9CCD00F0E94D /* AppDelegate.swift in Sources */,
-				FCE9D8481E2401F200424580 /* WheelChoiceCell.swift in Sources */,
+				FCE9D8481E2401F200424580 /* WheelChoiceView.swift in Sources */,
 				FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */,
 				FC10F55D1E24001B00226AE8 /* WheelChoiceViewModel.swift in Sources */,
 				FCEB55051E1DA50000F0E94D /* SliderView.swift in Sources */,

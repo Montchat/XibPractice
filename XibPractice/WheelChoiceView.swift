@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WheelChoiceCell: UITableViewCell {
+class WheelChoiceView: UIView  {
 	
 	var model:WheelChoiceViewModel = WheelChoiceViewModel()
 	
@@ -21,7 +21,6 @@ class WheelChoiceCell: UITableViewCell {
 	@IBOutlet weak var pickerView: UIPickerView!
 	@IBOutlet weak var height: NSLayoutConstraint!
 	
-	
 	@IBAction func questionPressed(_ sender: Any) {
 		print("question mark pressed")
 		
@@ -29,12 +28,11 @@ class WheelChoiceCell: UITableViewCell {
 	
 	@IBAction func changeSelection(_ sender: Any) {
 		
-		print("pressed")
+		print("changing")
 		
 		UIView.animate(withDuration: 0.33) { 
 			self.layoutIfNeeded()
 			self.height.constant = 100
-			print("finished")
 		}
 		
 	}
@@ -48,21 +46,10 @@ class WheelChoiceCell: UITableViewCell {
 		super.init(coder: aDecoder)
 		
 		height.constant = 0
-
-		guard let wheelChoiceCell = Bundle.main.loadNibNamed(Component.wheelChoiceCell, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
 		
-		addSubview(wheelChoiceCell)
+		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else {  return }
 		
-	}
-	
-	override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-		super.init(style: style, reuseIdentifier: reuseIdentifier)
-		
-		selectionStyle = .none
-		
-		guard let wheelChoiceCell = Bundle.main.loadNibNamed(Component.wheelChoiceCell, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
-		
-		addSubview(wheelChoiceCell)
+		addSubview(wheelChoiceView)
 		
 	}
 	

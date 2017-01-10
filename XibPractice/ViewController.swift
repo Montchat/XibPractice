@@ -11,10 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
 	@IBOutlet weak var sliderView: SliderView!
-	@IBOutlet weak var tableView: UITableView!
+	
+	@IBOutlet weak var wheelChoiceView: WheelChoiceView!
+	
 	@IBOutlet weak var multiChoiceView: MultiChoiceView!
 	
-	let testModel = SliderChoiceViewModel(with: "test question", minValue: "0", medianValue: "5", maxValue: "10")
+	let testModel = SliderChoiceViewModel(question: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 	let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "Add color", choices: [["red", "yellow", "blue"]], decimalAfterPosition: nil)
 	let multiChoiceModel = MultiChoiceViewModel(with: "Favorite food?" , index: nil, choices: ["banana", "carrot" ,"pear"])
 	
@@ -22,45 +24,9 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		sliderView.config(with: testModel)
-		
-		tableView.delegate = self ; tableView.dataSource = self
-		tableView.tableFooterView = UIView()
-		
+		wheelChoiceView.configure(with:wheelChoiceModel)
 		multiChoiceView.config(with: multiChoiceModel)
 		
 	}
 	
 }
-
-
-extension ViewController : UITableViewDelegate {
-	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
-	}
-	
-}
-
-extension ViewController : UITableViewDataSource {
-	
-	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 2
-		
-	}
-	
-	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		
-		let cell = WheelChoiceCell()
-		cell.config(with: wheelChoiceModel)
-		print("configured")
-		
-		return cell
-		
-	}
-	
-	func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-		return 1
-	}
-	
-}
-
