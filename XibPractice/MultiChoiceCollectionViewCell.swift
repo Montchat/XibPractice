@@ -22,7 +22,7 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	}
 	
 	func configure(with choice:String) {
-		
+		button.setTitle(choice, for: .normal)
 		
 	}
 	
