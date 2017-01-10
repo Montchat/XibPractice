@@ -29,9 +29,12 @@ class WheelChoiceCell: UITableViewCell {
 	
 	@IBAction func changeSelection(_ sender: Any) {
 		
+		print("pressed")
+		
 		UIView.animate(withDuration: 0.33) { 
 			self.layoutIfNeeded()
-			self.height.constant = 0
+			self.height.constant = 100
+			print("finished")
 		}
 		
 	}

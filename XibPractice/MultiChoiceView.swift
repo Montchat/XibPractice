@@ -21,10 +21,19 @@ class MultiChoiceView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
+		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
 		choicesView.register(UINib(nibName: MultiChoiceCollectionViewCell.identifier, bundle:nil), forCellWithReuseIdentifier:  MultiChoiceCollectionViewCell.identifier)
 	
 		addSubview(sliderView)
+		
+	}
+	
+	func config(with model: MultiChoiceViewModel) {
+		
+		choicesView.delegate = self ; choicesView.dataSource = self
+		
+		self.model = model
+		self.question.text = model.title
 		
 	}
 	

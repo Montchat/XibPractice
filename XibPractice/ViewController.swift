@@ -24,7 +24,9 @@ class ViewController: UIViewController {
 		sliderView.config(with: testModel)
 		
 		tableView.delegate = self ; tableView.dataSource = self
-		tableView.tableFooterView = UIView() 
+		tableView.tableFooterView = UIView()
+		
+		multiChoiceView.config(with: multiChoiceModel)
 		
 	}
 	
@@ -50,6 +52,8 @@ extension ViewController : UITableViewDataSource {
 		
 		let cell = WheelChoiceCell()
 		cell.config(with: wheelChoiceModel)
+		print("configured")
+		
 		return cell
 		
 	}
