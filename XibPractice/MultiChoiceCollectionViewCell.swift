@@ -12,6 +12,8 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	
 	@IBOutlet weak var button: UIButton!
 	
+	static var identifier = "MultiChoiceCollectionViewCell"
+	
 	@IBAction func buttonPressed(_ sender: Any) {
 		
 	}
@@ -30,7 +32,7 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	}
 	
 	func choose(button:UIButton) {
-		print("selected")
+
 		button.isSelected = !button.isSelected
 		
 	}

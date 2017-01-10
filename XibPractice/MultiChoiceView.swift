@@ -21,44 +21,10 @@ class MultiChoiceView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
-		choicesView.register(UINib(nibName: "MultiChoiceCollectionViewCell", bundle:nil), forCellWithReuseIdentifier:  "MultiChoiceCollectionViewCell")
+		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
+		choicesView.register(UINib(nibName: MultiChoiceCollectionViewCell.identifier, bundle:nil), forCellWithReuseIdentifier:  MultiChoiceCollectionViewCell.identifier)
 	
 		addSubview(sliderView)
-		
-	}
-	
-	func config(with model: MultiChoiceViewModel) {
-		
-		choicesView.delegate = self ; choicesView.dataSource = self
-		
-		for view in choicesView.subviews { view.removeFromSuperview() }
-		
-		for (index, choice) in model.choices.enumerated() {
-			
-			let button = UIButton(type: .custom)
-			button.tag = index
-			button.setTitle(choice, for: .normal)
-			button.setTitleColor(UIColor.black, for: .normal)
-			button.setImage(#imageLiteral(resourceName: "circleUnchecked"), for: .normal)
-			button.setImage(#imageLiteral(resourceName: "circleChecked"), for: .selected)
-			button.addTarget(self, action: #selector(choose(button:)), for: .touchUpInside)
-			
-			if let select = model.index, select == index {
-				button.isSelected = true
-			}
-			
-			button.sizeToFit()
-			
-		}
-		
-		self.model = model
-		self.question.text = model.title
-		
-	}
-	
-	func choose(button:UIButton) {
-		model.update(button.tag)
 		
 	}
 	
@@ -80,11 +46,9 @@ extension MultiChoiceView : UICollectionViewDelegate {
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		
-		guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MultiChoiceCollectionViewCell", for: indexPath) as? MultiChoiceCollectionViewCell else { return UICollectionViewCell() }
-		
+		guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: MultiChoiceCollectionViewCell.identifier, for: indexPath) as? MultiChoiceCollectionViewCell else { return UICollectionViewCell() }
 		
 		collectionViewCell.configure(with: model.choices[indexPath.row])
-		
 		
 		return collectionViewCell 
 	}
