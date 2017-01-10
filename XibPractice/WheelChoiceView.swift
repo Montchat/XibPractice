@@ -51,17 +51,27 @@ class WheelChoiceView: UIView  {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else {  return }
+		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
+		
+		var startFrame = CGRect(x: 0, y: pickerView.frame.maxY, width: pickerView.frame.width, height: 0)
+		
+		let headerBar = UIView(frame:startFrame)
+		headerBar.layer.borderWidth = 0.50
+		headerBar.layer.masksToBounds = true
+			
+		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
 		
 		height.constant = 0
 		
 		pickerView.delegate = self ; pickerView.dataSource = self
+		pickerView.addSubview(headerBar)
 		
 		addSubview(wheelChoiceView)
 		
 	}
 	
 	func config(with model: WheelChoiceViewModel) {
+		
 		self.model = model
 		property.text = model.title
 		selection.setTitle(model.placeholder, for: .normal)
