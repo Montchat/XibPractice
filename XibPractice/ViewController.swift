@@ -26,13 +26,6 @@ class ViewController: UIViewController {
 		tableView.delegate = self ; tableView.dataSource = self
 		tableView.tableFooterView = UIView() 
 		
-		multiChoiceView.config(with: multiChoiceModel)
-	
-		multiChoiceModel.update = { index in
-			self.multiChoiceModel.index = index
-			self.multiChoiceView.config(with: self.multiChoiceModel)
-		}
-		
 	}
 	
 }
