@@ -16,16 +16,11 @@ class MultiChoiceView: UIView {
 	
 	@IBOutlet weak var question: UILabel!
 	
-	@IBOutlet weak var choicesView: UIStackView!
-	
+	@IBOutlet weak var choicesView: UICollectionView!
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
 		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
-		choicesView.alignment = .fill
-		choicesView.axis = .horizontal
-		choicesView.distribution = .equalSpacing
-		choicesView.isLayoutMarginsRelativeArrangement = true
 		
 		addSubview(sliderView)
 		
@@ -50,7 +45,6 @@ class MultiChoiceView: UIView {
 			}
 			
 			button.sizeToFit()
-			choicesView.addArrangedSubview(button)
 			
 		}
 		
@@ -64,4 +58,25 @@ class MultiChoiceView: UIView {
 		
 	}
 	
+}
+
+extension MultiChoiceView : UICollectionViewDataSource {
+	
+	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		
+		return model.choices.count
+	}
+	
+	func numberOfSections(in collectionView: UICollectionView) -> Int {
+		return 1
+	}
+	
+}
+extension MultiChoiceView : UICollectionViewDataSource {
+	
+	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+		
+		return UICollectionViewCell()
+	}
+
 }
