@@ -10,7 +10,7 @@
 		FC0C6BB81E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0C6BB71E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib */; };
 		FC0C6BBA1E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C6BB91E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift */; };
 		FC10F55D1E24001B00226AE8 /* WheelChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */; };
-		FC10F5601E24003D00226AE8 /* WheelChoiceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */; };
+		FC10F5601E24003D00226AE8 /* WheelChoiceViewl.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC10F55F1E24003D00226AE8 /* WheelChoiceViewl.xib */; };
 		FC7D6A3A1E1EA55A0080E88C /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A391E1EA55A0080E88C /* Component.swift */; };
 		FC7D6A401E1EAA7A0080E88C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */; };
 		FCE9D8481E2401F200424580 /* WheelChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE9D8471E2401F200424580 /* WheelChoiceView.swift */; };
@@ -54,7 +54,7 @@
 		FC0C6BB71E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiChoiceCollectionViewCell.xib; sourceTree = "<group>"; };
 		FC0C6BB91E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiChoiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelChoiceViewModel.swift; sourceTree = "<group>"; };
-		FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WheelChoiceCell.xib; sourceTree = "<group>"; };
+		FC10F55F1E24003D00226AE8 /* WheelChoiceViewl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WheelChoiceViewl.xib; sourceTree = "<group>"; };
 		FC7D6A391E1EA55A0080E88C /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		FCE9D8471E2401F200424580 /* WheelChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelChoiceView.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		FC10F55E1E24002B00226AE8 /* WheelChoice */ = {
 			isa = PBXGroup;
 			children = (
-				FC10F55F1E24003D00226AE8 /* WheelChoiceCell.xib */,
+				FC10F55F1E24003D00226AE8 /* WheelChoiceViewl.xib */,
 				FCE9D8471E2401F200424580 /* WheelChoiceView.swift */,
 				FC10F55C1E24001B00226AE8 /* WheelChoiceViewModel.swift */,
 			);
@@ -347,7 +347,7 @@
 				FCEB54DA1E1D9CCD00F0E94D /* Assets.xcassets in Resources */,
 				FC0C6BB81E2581B1000E6A71 /* MultiChoiceCollectionViewCell.xib in Resources */,
 				FCEB54D51E1D9CCD00F0E94D /* Main.storyboard in Resources */,
-				FC10F5601E24003D00226AE8 /* WheelChoiceCell.xib in Resources */,
+				FC10F5601E24003D00226AE8 /* WheelChoiceViewl.xib in Resources */,
 				FCE9D84A1E24349C00424580 /* MultiChoiceView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
