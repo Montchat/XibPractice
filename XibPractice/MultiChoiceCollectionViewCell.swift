@@ -23,6 +23,15 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	
 	func configure(with choice:String) {
 		button.setTitle(choice, for: .normal)
+		button.setImage(#imageLiteral(resourceName: "circleUnchecked"), for: .normal)
+		button.setImage(#imageLiteral(resourceName: "circleChecked"), for: .selected)
+		button.addTarget(self, action: #selector(choose(button:)), for: .touchUpInside)
+		
+	}
+	
+	func choose(button:UIButton) {
+		print("selected")
+		button.isSelected = !button.isSelected
 		
 	}
 	
