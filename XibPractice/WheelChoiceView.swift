@@ -22,17 +22,24 @@ class WheelChoiceView: UIView  {
 	@IBOutlet weak var height: NSLayoutConstraint!
 	
 	@IBAction func questionPressed(_ sender: Any) {
-		print("question mark pressed")
+		print("question pressed")
 		
 	}
 	
 	@IBAction func changeSelection(_ sender: Any) {
+		let constant:CGFloat
 		
-		print("changing")
+		switch height.constant {
+			case 100:
+			constant = 0
+		default:
+			constant = 100
+			
+		}
 		
-		UIView.animate(withDuration: 0.33) { 
+		UIView.animate(withDuration: 0.33) {
 			self.layoutIfNeeded()
-			self.height.constant = 100
+			self.height.constant = constant
 		}
 		
 	}
@@ -44,6 +51,8 @@ class WheelChoiceView: UIView  {
 		
 		height.constant = 0
 		
+		pickerView.delegate = self ; pickerView.dataSource = self
+		
 		addSubview(wheelChoiceView)
 		
 	}
@@ -52,6 +61,7 @@ class WheelChoiceView: UIView  {
 		self.model = model
 		property.text = model.title
 		selection.setTitle(model.placeholder, for: .normal)
+		pickerView.reloadAllComponents()
 		
 	}
 	
