@@ -20,12 +20,9 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snl-2c-vc8">
                         <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
-                        <state key="normal" title="Button" image="5DEBE249-4594-40CE-A20E-867633FA54D1">
+                        <state key="normal" title="Button" image="C7CC3757-4657-4DE9-8B9E-A3FED834624F">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
-                        <connections>
-                            <action selector="buttonPressed:" destination="rcr-Bk-rLc" eventType="touchUpInside" id="eCQ-NF-AHg"/>
-                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -43,7 +40,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="5DEBE249-4594-40CE-A20E-867633FA54D1" width="44" height="44">
+        <image name="C7CC3757-4657-4DE9-8B9E-A3FED834624F" width="44" height="44">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

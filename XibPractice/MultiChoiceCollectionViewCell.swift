@@ -13,11 +13,7 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	@IBOutlet weak var button: UIButton!
 	
 	static var identifier = "MultiChoiceCollectionViewCell"
-	
-	@IBAction func buttonPressed(_ sender: Any) {
 		
-	}
-	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 

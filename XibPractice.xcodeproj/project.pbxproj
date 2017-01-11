@@ -30,7 +30,6 @@
 		FCEB55071E1DA7FE00F0E94D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55061E1DA7FE00F0E94D /* Fonts.swift */; };
 		FCEB55091E1DB01500F0E94D /* SliderChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */; };
 		FCEB550C1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */; };
-		FCEB550D1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +79,6 @@
 		FCEB55061E1DA7FE00F0E94D /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		FCEB55081E1DB01500F0E94D /* SliderChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderChoiceViewModel.swift; sourceTree = "<group>"; };
 		FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MultiChoiceViewModel.swift; path = "../../../Documents/Projects/Client/thyroid-3D-ios/thyroid-3D-ios/MultiChoiceViewModel.swift"; sourceTree = "<group>"; };
-		FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = YesNoChoiceViewModel.swift; path = "../../../Documents/Projects/Client/thyroid-3D-ios/thyroid-3D-ios/YesNoChoiceViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,20 +138,12 @@
 		FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */ = {
 			isa = PBXGroup;
 			children = (
-				FC0C6BBB1E25853C000E6A71 /* MultiChoiceViewCell */,
 				FCE9D8491E24349C00424580 /* MultiChoiceView.xib */,
 				FCE9D84B1E2436E500424580 /* MultiChoiceView.swift */,
 				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
+				FC0C6BBB1E25853C000E6A71 /* MultiChoiceViewCell */,
 			);
 			name = MultiChoiceView;
-			sourceTree = "<group>";
-		};
-		FC7D6A3D1E1EA6A00080E88C /* YesNoView */ = {
-			isa = PBXGroup;
-			children = (
-				FCEB550B1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift */,
-			);
-			name = YesNoView;
 			sourceTree = "<group>";
 		};
 		FC7D6A3E1E1EA76B0080E88C /* System */ = {
@@ -227,7 +217,6 @@
 				FC7D6A3B1E1EA6780080E88C /* SliderView */,
 				FC10F55E1E24002B00226AE8 /* WheelChoice */,
 				FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */,
-				FC7D6A3D1E1EA6A00080E88C /* YesNoView */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -373,7 +362,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCEB550D1E1DB1EA00F0E94D /* YesNoChoiceViewModel.swift in Sources */,
 				FC0C6BBA1E2581DB000E6A71 /* MultiChoiceCollectionViewCell.swift in Sources */,
 				FCEB54D81E1D9CCD00F0E94D /* XibPractice.xcdatamodeld in Sources */,
 				FC7D6A401E1EAA7A0080E88C /* UIViewExtension.swift in Sources */,
