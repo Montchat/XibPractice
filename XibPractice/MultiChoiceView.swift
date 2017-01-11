@@ -21,8 +21,10 @@ class MultiChoiceView: UIView {
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 		
-		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { print("did not work") ; return }
+		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
+		
 		choicesView.register(UINib(nibName: MultiChoiceCollectionViewCell.identifier, bundle:nil), forCellWithReuseIdentifier:  MultiChoiceCollectionViewCell.identifier)
+		choicesView.bounces = false
 	
 		addSubview(sliderView)
 		

@@ -18,33 +18,15 @@ class WheelChoiceView: UIView  {
 	
 	@IBOutlet weak var selection: UIButton!
 	
-	@IBOutlet weak var pickerView: UIPickerView!
-	
-	@IBOutlet weak var height: NSLayoutConstraint!
-	
-	@IBOutlet weak var toolBar: UIToolbar!
+	@IBOutlet weak var textField: UITextField!
 	
 	@IBAction func questionPressed(_ sender: Any) {
+		print("question pressed")
 		
 	}
-	
-	@IBAction func changeSelection(_ sender: Any) {
-		updateConstraint()
 		
-	}
 	
-	@IBAction func cancel(_ sender: Any) {
-		updateConstraint()
-		
-	}
-	
-	
-	@IBAction func donePressed(_ sender: Any) {
-		updateConstraint()
-		let choices  = model.choices
-		let selection = choices[0][pickerView.selectedRow(inComponent: 0)]
-		self.selection.setTitle(selection, for: .normal)
-		self.selection.setTitleColor(UIColor.black, for: .normal)
+	@IBAction func addOrRemove(_ sender: Any) {
 		
 	}
 	
@@ -53,10 +35,7 @@ class WheelChoiceView: UIView  {
 		
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
 		
-		height.constant = 0
-		toolBar.alpha = 0 ; pickerView.alpha = 0
-		
-		pickerView.delegate = self ; pickerView.dataSource = self
+		textField.inputView = UIPickerView() 
 		
 		addSubview(wheelChoiceView)
 
@@ -67,39 +46,9 @@ class WheelChoiceView: UIView  {
 		self.model = model
 		property.text = model.title
 		selection.setTitle(model.placeholder, for: .normal)
-		pickerView.reloadAllComponents()
 		
 	}
 	
-	func updateConstraint() {
-		let constant:CGFloat
-		let alpha:CGFloat
-		let duration:Double
-		
-		switch height.constant {
-		case 200:
-			constant = 0
-			alpha = 0
-			duration = 0.165
-		default:
-			constant = 200
-			alpha = 1
-			duration = 0.33
-			
-		}
-		
-		view.layoutIfNeeded()
-		
-		UIView.animate(withDuration: duration) {
-			self.height.constant = constant
-			self.toolBar.alpha = alpha
-			self.pickerView.alpha = alpha
-			
-			self.view.layoutIfNeeded()
-			
-		}
-		
-	}
 	
 }
 
@@ -127,3 +76,12 @@ extension WheelChoiceView : UIPickerViewDataSource {
 	
 }
 
+extension WheelChoiceView : UITextFieldDelegate {
+	
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		
+	}
+	
+	textField
+	
+}

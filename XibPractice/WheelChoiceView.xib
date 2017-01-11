@@ -11,17 +11,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WheelChoiceView" customModule="XibPractice" customModuleProvider="target">
             <connections>
-                <outlet property="height" destination="sGw-Xt-d8U" id="RJQ-DZ-Avp"/>
-                <outlet property="pickerView" destination="y9h-Vl-stB" id="Wwc-wW-kZM"/>
+                <outlet property="addOrRemove" destination="D3Z-pN-TdW" id="do1-Vs-ZM7"/>
                 <outlet property="property" destination="Nfv-Ji-UCh" id="d6n-q9-Ijb"/>
                 <outlet property="selection" destination="D3Z-pN-TdW" id="aDH-y3-MVa"/>
-                <outlet property="toolBar" destination="1qQ-d0-alq" id="6aV-e6-JcE"/>
+                <outlet property="textField" destination="hy2-uI-N3F" id="uLD-Qw-5aC"/>
                 <outlet property="view" destination="iN0-l3-epB" id="RN3-YC-0Q4"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="244"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ih7-5Y-kbM">
@@ -42,11 +41,13 @@
                             </constraints>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3Z-pN-TdW">
-                            <rect key="frame" x="188" y="0.0" width="120" height="44"/>
-                            <state key="normal" title="Selection" image="add">
+                            <rect key="frame" x="188" y="0.0" width="44" height="44"/>
+                            <state key="normal" image="add">
                                 <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
+                                <action selector="add:" destination="-1" eventType="touchUpInside" id="kbU-pM-aXi"/>
+                                <action selector="addOrRemove:" destination="-1" eventType="touchUpInside" id="iqd-Ba-eYK"/>
                                 <action selector="changeSelection:" destination="-1" eventType="touchUpInside" id="Hqr-x8-DYn"/>
                             </connections>
                         </button>
@@ -57,6 +58,12 @@
                                 <action selector="questionPressed:" destination="-1" eventType="touchUpInside" id="5Ka-eM-TMo"/>
                             </connections>
                         </button>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="add value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hy2-uI-N3F">
+                            <rect key="frame" x="243" y="13.5" width="66.5" height="17"/>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -64,6 +71,8 @@
                         <constraint firstItem="Nfv-Ji-UCh" firstAttribute="top" secondItem="ih7-5Y-kbM" secondAttribute="top" constant="12" id="7mh-Yh-jED"/>
                         <constraint firstItem="mUM-MN-WLe" firstAttribute="leading" secondItem="Nfv-Ji-UCh" secondAttribute="trailing" constant="3" id="Iwz-ph-ObU"/>
                         <constraint firstItem="mUM-MN-WLe" firstAttribute="centerY" secondItem="Nfv-Ji-UCh" secondAttribute="centerY" id="JVz-im-o6K"/>
+                        <constraint firstItem="hy2-uI-N3F" firstAttribute="leading" secondItem="D3Z-pN-TdW" secondAttribute="trailing" constant="11" id="VpM-FK-gQ5"/>
+                        <constraint firstItem="hy2-uI-N3F" firstAttribute="centerY" secondItem="D3Z-pN-TdW" secondAttribute="centerY" id="Y11-et-zWo"/>
                         <constraint firstAttribute="height" constant="44" id="gXY-dM-E74"/>
                         <constraint firstItem="mH2-Ys-fKM" firstAttribute="top" secondItem="ih7-5Y-kbM" secondAttribute="top" id="lc5-fB-VuW"/>
                         <constraint firstItem="D3Z-pN-TdW" firstAttribute="leading" secondItem="mH2-Ys-fKM" secondAttribute="trailing" id="m2a-6H-yDv"/>
@@ -71,57 +80,16 @@
                         <constraint firstItem="mH2-Ys-fKM" firstAttribute="centerX" secondItem="ih7-5Y-kbM" secondAttribute="centerX" id="vna-Ed-btg"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gD7-Ke-lrb">
-                    <rect key="frame" x="0.0" y="44" width="375" height="200"/>
-                    <subviews>
-                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1qQ-d0-alq">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <items>
-                                <barButtonItem systemItem="cancel" id="594-et-6RC">
-                                    <connections>
-                                        <action selector="cancel:" destination="-1" id="GHE-Xu-yPu"/>
-                                    </connections>
-                                </barButtonItem>
-                                <barButtonItem style="plain" systemItem="flexibleSpace" id="C1i-b9-TZf"/>
-                                <barButtonItem style="done" systemItem="done" id="vSN-Ys-yeS">
-                                    <connections>
-                                        <action selector="donePressed:" destination="-1" id="ee8-cR-OXT"/>
-                                    </connections>
-                                </barButtonItem>
-                            </items>
-                        </toolbar>
-                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9h-Vl-stB">
-                            <rect key="frame" x="0.0" y="44" width="375" height="156"/>
-                        </pickerView>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="bottom" secondItem="y9h-Vl-stB" secondAttribute="bottom" id="HUw-wS-XaB"/>
-                        <constraint firstAttribute="trailing" secondItem="1qQ-d0-alq" secondAttribute="trailing" id="Jyx-3r-BcX"/>
-                        <constraint firstItem="y9h-Vl-stB" firstAttribute="leading" secondItem="gD7-Ke-lrb" secondAttribute="leading" id="L6u-4o-u2e"/>
-                        <constraint firstItem="y9h-Vl-stB" firstAttribute="top" secondItem="gD7-Ke-lrb" secondAttribute="top" constant="44" id="LxW-sT-5lM"/>
-                        <constraint firstItem="y9h-Vl-stB" firstAttribute="leading" secondItem="gD7-Ke-lrb" secondAttribute="leading" id="SWO-oc-8d7"/>
-                        <constraint firstAttribute="trailing" secondItem="y9h-Vl-stB" secondAttribute="trailing" id="Xro-Xt-2c9"/>
-                        <constraint firstItem="1qQ-d0-alq" firstAttribute="leading" secondItem="gD7-Ke-lrb" secondAttribute="leading" id="fcg-Sn-2fG"/>
-                        <constraint firstAttribute="bottom" secondItem="y9h-Vl-stB" secondAttribute="bottom" id="mBO-kZ-b7J"/>
-                        <constraint firstAttribute="height" constant="200" id="sGw-Xt-d8U"/>
-                        <constraint firstItem="1qQ-d0-alq" firstAttribute="top" secondItem="gD7-Ke-lrb" secondAttribute="top" id="tsG-20-daf"/>
-                        <constraint firstAttribute="trailing" secondItem="y9h-Vl-stB" secondAttribute="trailing" id="wpQ-ra-mDf"/>
-                    </constraints>
-                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ih7-5Y-kbM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7nf-pm-kwc"/>
                 <constraint firstItem="ih7-5Y-kbM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DuO-YR-NAn"/>
-                <constraint firstItem="gD7-Ke-lrb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MPF-F2-qXd"/>
                 <constraint firstItem="ih7-5Y-kbM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="QOx-Hx-MD6"/>
                 <constraint firstAttribute="trailing" secondItem="ih7-5Y-kbM" secondAttribute="trailing" id="VxW-yO-tVA"/>
-                <constraint firstAttribute="trailing" secondItem="gD7-Ke-lrb" secondAttribute="trailing" id="tHR-KT-anN"/>
-                <constraint firstItem="gD7-Ke-lrb" firstAttribute="top" secondItem="ih7-5Y-kbM" secondAttribute="bottom" id="vmc-hK-hhr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-4.5" y="140"/>
+            <point key="canvasLocation" x="-17.5" y="7"/>
         </view>
     </objects>
     <resources>
