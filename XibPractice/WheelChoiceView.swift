@@ -24,14 +24,18 @@ class WheelChoiceView: UIView  {
 	
 	var oldValue:[Int] = []
 	
-	
 	@IBAction func questionPressed(_ sender: Any) {
 		print("question pressed")
 		
 	}
 	
 	@IBAction func addOrRemove(_ sender: Any) {
-		textField.becomeFirstResponder()
+		if model.choice == "" {
+			textField.becomeFirstResponder()
+		} else {
+			model.update([])
+			
+		}
 		
 	}
 	
@@ -110,10 +114,17 @@ class WheelChoiceView: UIView  {
 	func config(with model: WheelChoiceViewModel) {
 		
 		self.model = model
+		
+		switch model.choice {
+		case "":
+			selection.setImage(#imageLiteral(resourceName: "add"), for: .normal)
+		default:
+			selection.setImage(#imageLiteral(resourceName: "delete"), for: .normal)
+		}
+		
 		property.text = model.title
 		textField.placeholder = model.placeholder
 		textField.text = model.choice
-		
 		
 	}
 
@@ -161,7 +172,6 @@ extension WheelChoiceView : UITextFieldDelegate {
 	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
 		oldValue = model.indexes
-		print("OLDVALUE \(oldValue)")
 		
 	}
 	
