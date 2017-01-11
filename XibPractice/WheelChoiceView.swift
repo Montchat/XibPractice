@@ -25,7 +25,6 @@ class WheelChoiceView: UIView  {
 	@IBOutlet weak var toolBar: UIToolbar!
 	
 	@IBAction func questionPressed(_ sender: Any) {
-		print("question pressed")
 		
 	}
 	
@@ -42,9 +41,11 @@ class WheelChoiceView: UIView  {
 	
 	@IBAction func donePressed(_ sender: Any) {
 		updateConstraint()
-		
-		let selection = pickerView.selectedRow(inComponent: 0).description
+		let choices  = model.choices
+		let selection = choices[0][pickerView.selectedRow(inComponent: 0)]
 		self.selection.setTitle(selection, for: .normal)
+		self.selection.setTitleColor(UIColor.black, for: .normal)
+		
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -104,6 +105,7 @@ class WheelChoiceView: UIView  {
 
 extension WheelChoiceView : UIPickerViewDelegate {
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+		selection.setTitle(model.choices[component][row], for: .normal)
 		
 	}
 }
