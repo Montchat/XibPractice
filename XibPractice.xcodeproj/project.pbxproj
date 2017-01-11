@@ -140,6 +140,7 @@
 		FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */ = {
 			isa = PBXGroup;
 			children = (
+				FC0C6BBB1E25853C000E6A71 /* MultiChoiceViewCell */,
 				FCE9D8491E24349C00424580 /* MultiChoiceView.xib */,
 				FCE9D84B1E2436E500424580 /* MultiChoiceView.swift */,
 				FCEB550A1E1DB1EA00F0E94D /* MultiChoiceViewModel.swift */,
@@ -223,10 +224,9 @@
 			children = (
 				FC7D6A391E1EA55A0080E88C /* Component.swift */,
 				FC7D6A3F1E1EAA7A0080E88C /* UIViewExtension.swift */,
+				FC7D6A3B1E1EA6780080E88C /* SliderView */,
 				FC10F55E1E24002B00226AE8 /* WheelChoice */,
 				FC7D6A3C1E1EA6950080E88C /* MultiChoiceView */,
-				FC0C6BBB1E25853C000E6A71 /* MultiChoiceViewCell */,
-				FC7D6A3B1E1EA6780080E88C /* SliderView */,
 				FC7D6A3D1E1EA6A00080E88C /* YesNoView */,
 			);
 			name = Components;

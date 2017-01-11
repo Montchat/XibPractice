@@ -20,10 +20,14 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
+
 		
 	}
 	
 	func configure(with choice:String) {
+		
+		button.isUserInteractionEnabled = false
+		
 		button.setTitle(choice, for: .normal)
 		button.setImage(#imageLiteral(resourceName: "circleUnchecked"), for: .normal)
 		button.setImage(#imageLiteral(resourceName: "circleChecked"), for: .selected)

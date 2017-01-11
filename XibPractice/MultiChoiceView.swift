@@ -32,16 +32,11 @@ class MultiChoiceView: UIView {
 	
 	func config(with model: MultiChoiceViewModel) {
 		
-		choicesView.delegate = self ; choicesView.dataSource = self
-		
 		self.model = model
+		
+		choicesView.delegate = self ; choicesView.dataSource = self
 		question.text = model.title
-		
-	}
-	
-	func updateWith(model: MultiChoiceViewModel) {
-		
-		
+		choicesView.reloadData()
 	}
 	
 }
@@ -49,7 +44,12 @@ class MultiChoiceView: UIView {
 extension MultiChoiceView : UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+		
 		return model.choices.count
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		model.update(indexPath.item)
 	}
 	
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -63,7 +63,19 @@ extension MultiChoiceView : UICollectionViewDelegate {
 		
 		guard let collectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: MultiChoiceCollectionViewCell.identifier, for: indexPath) as? MultiChoiceCollectionViewCell else { return UICollectionViewCell() }
 		
-		collectionViewCell.configure(with: model.choices[indexPath.row])
+		let indexPath = indexPath.row
+		
+		if let index = model.index {
+			if indexPath == index {
+				collectionViewCell.button.isSelected = true
+				
+			} else {
+				collectionViewCell.button.isSelected = false
+			}
+			
+		}
+		
+		collectionViewCell.configure(with: model.choices[indexPath])
 		
 		return collectionViewCell 
 	}

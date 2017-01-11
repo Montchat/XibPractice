@@ -16,15 +16,15 @@ class ViewController: UIViewController {
 	
 	@IBOutlet weak var multiChoiceView: MultiChoiceView!
 	
-		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "Add color", choices: [["red", "yellow", "blue"]], decimalAfterPosition: nil)
-		let multiChoiceModel = MultiChoiceViewModel(with: "Are you hungry?" , index: 0, choices: ["yes" , "no" ])
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		let sliderChoiceViewModel = SliderChoiceViewModel(question: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 		
+		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "Add color", choices: [["red", "yellow", "blue"]], decimalAfterPosition: nil)
 		
+		let multiChoiceModel = MultiChoiceViewModel(with: "Are you hungry?" , index: 0, choices: ["yes" , "no" ])
+
 		sliderChoiceViewModel.update = { level in
 			sliderChoiceViewModel.level = level
 			self.sliderView.config(with: sliderChoiceViewModel)
@@ -34,13 +34,14 @@ class ViewController: UIViewController {
 		sliderView.config(with: sliderChoiceViewModel)
 		
 		wheelChoiceView.config(with: wheelChoiceModel)
-		multiChoiceView.config(with: multiChoiceModel)
 		
 		multiChoiceModel.update = { index in
 			
-			self.multiChoiceModel.index = index
-			self.multiChoiceView.config(with: self.multiChoiceModel)
+			multiChoiceModel.index = index
+			self.multiChoiceView.config(with: multiChoiceModel)
 		}
+		
+		multiChoiceView.config(with: multiChoiceModel)
 		
 	}
 	
