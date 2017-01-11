@@ -35,7 +35,7 @@ class MultiChoiceView: UIView {
 		choicesView.delegate = self ; choicesView.dataSource = self
 		
 		self.model = model
-		self.question.text = model.title
+		question.text = model.title
 		
 	}
 	
@@ -44,7 +44,6 @@ class MultiChoiceView: UIView {
 extension MultiChoiceView : UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		
 		return model.choices.count
 	}
 	

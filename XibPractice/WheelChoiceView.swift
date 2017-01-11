@@ -20,23 +20,27 @@ class WheelChoiceView: UIView  {
 	
 	@IBOutlet weak var textField: UITextField!
 	
+	var pickerView = UIPickerView()
+	
 	@IBAction func questionPressed(_ sender: Any) {
 		print("question pressed")
 		
 	}
 	
+	@IBAction func addOrRemove(_ sender: Any) {
+		textField.becomeFirstResponder()
+		
+	}
+	
 	func cancel() {
-		print("cancel")
-		view.endEditing(true)
+		textField.resignFirstResponder()
 		
 	}
 	
 	func done() {
-		print("done")
-		view.endEditing(true); textField.resignFirstResponder()
-	}
-	
-	@IBAction func addOrRemove(_ sender: Any) {
+		let selected = pickerView.selectedRow(inComponent: 0)
+		textField.text = model.choices[0][selected]
+		textField.resignFirstResponder()
 		
 	}
 	
@@ -46,7 +50,6 @@ class WheelChoiceView: UIView  {
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
 		
 		textField.delegate = self ; textField.allowsEditingTextAttributes = false
-		
 		
 		let pickerView = UIPickerView()
 		pickerView.autoresizingMask = .flexibleWidth
@@ -82,6 +85,7 @@ class WheelChoiceView: UIView  {
 		pickerContainer.addSubview(headerBar)
 		
 		textField.inputView = pickerContainer
+		self.pickerView = pickerView
 		
 		addSubview(wheelChoiceView)
 
