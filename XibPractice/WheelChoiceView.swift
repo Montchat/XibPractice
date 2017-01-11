@@ -32,7 +32,17 @@ class WheelChoiceView: UIView  {
 	}
 	
 	func cancel() {
+		print("tapped")
 		updateConstraint()
+		
+	}
+	
+	func selectValue() {
+		print("tapped")
+		updateConstraint()
+		
+		let selection = pickerView.selectedRow(inComponent: 0).description
+		self.selection.setTitle(selection, for: .normal)
 		
 	}
 	
@@ -47,14 +57,17 @@ class WheelChoiceView: UIView  {
 		headerBar.layer.borderWidth = 0.50
 		headerBar.layer.masksToBounds = true
 		
-		let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
+		let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 80, height: 18))
 		cancelButton.setTitle("Cancel", for: .normal)
-		cancelButton.setTitleColor(UIColor.blue, for: .normal)
-		cancelButton.addTarget(self, action:"cancel" ,for: .touchUpInside)
+		cancelButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
+		cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+		cancelButton.addTarget(self, action: #selector(WheelChoiceView.cancel), for: .touchUpInside)
 		
 		let addButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
 		addButton.setTitle("Ok", for: .normal)
-		addButton.setTitleColor(UIColor.blue, for: .normal)
+		addButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
+		addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+		addButton.addTarget(self, action: #selector(WheelChoiceView.selectValue), for: .touchUpInside)
 		
 		headerBar.addSubview(cancelButton)
 		headerBar.addSubview(addButton)
@@ -64,7 +77,6 @@ class WheelChoiceView: UIView  {
 		height.constant = 0
 		
 		pickerView.delegate = self ; pickerView.dataSource = self
-		pickerView.backgroundColor = UIColor.red
 		pickerView.addSubview(headerBar)
 		
 		addSubview(wheelChoiceView)
@@ -105,7 +117,6 @@ class WheelChoiceView: UIView  {
 
 extension WheelChoiceView : UIPickerViewDelegate {
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-		print("selected")
 		
 	}
 }
