@@ -53,7 +53,7 @@ class WheelChoiceView: UIView  {
 		
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
 		
-		var startFrame = CGRect(x: 0, y: pickerView.frame.maxY, width: pickerView.frame.width, height: 0)
+		let startFrame = CGRect(x: 0, y: pickerView.bounds.minY, width: pickerView.frame.width, height: 40)
 		
 		let headerBar = UIView(frame:startFrame)
 		headerBar.layer.borderWidth = 0.50
@@ -61,9 +61,10 @@ class WheelChoiceView: UIView  {
 			
 		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
 		
-		height.constant = 0
+		height.constant = 100
 		
 		pickerView.delegate = self ; pickerView.dataSource = self
+		pickerView.backgroundColor = UIColor.red
 		pickerView.addSubview(headerBar)
 		
 		addSubview(wheelChoiceView)
