@@ -19,7 +19,10 @@ class WheelChoiceView: UIView  {
 	@IBOutlet weak var selection: UIButton!
 	
 	@IBOutlet weak var pickerView: UIPickerView!
+	
 	@IBOutlet weak var height: NSLayoutConstraint!
+	
+	@IBOutlet weak var toolBar: UIToolbar!
 	
 	@IBAction func questionPressed(_ sender: Any) {
 		print("question pressed")
@@ -31,19 +34,17 @@ class WheelChoiceView: UIView  {
 		
 	}
 	
-	func cancel() {
-		print("tapped")
+	@IBAction func cancel(_ sender: Any) {
 		updateConstraint()
 		
 	}
 	
-	func selectValue() {
-		print("tapped")
+	
+	@IBAction func donePressed(_ sender: Any) {
 		updateConstraint()
 		
 		let selection = pickerView.selectedRow(inComponent: 0).description
 		self.selection.setTitle(selection, for: .normal)
-		
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -51,36 +52,13 @@ class WheelChoiceView: UIView  {
 		
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
 		
-		let startFrame = CGRect(x: 0, y: pickerView.bounds.minY, width: pickerView.frame.width, height: 43)
-		
-		let headerBar = UIView(frame:startFrame)
-		headerBar.layer.borderWidth = 0.50
-		headerBar.layer.masksToBounds = true
-		
-		let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
-		cancelButton.setTitle("Cancel", for: .normal)
-		cancelButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
-		cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-		cancelButton.addTarget(self, action: #selector(WheelChoiceView.cancel), for: .touchUpInside)
-		
-		let doneButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
-		doneButton.setTitle("Done", for: .normal)
-		doneButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
-		doneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-		doneButton.addTarget(self, action: #selector(WheelChoiceView.selectValue), for: .touchUpInside)
-		
-		headerBar.addSubview(cancelButton)
-		headerBar.addSubview(doneButton)
-		
-		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
-		
 		height.constant = 0
+		toolBar.alpha = 0 ; pickerView.alpha = 0
 		
 		pickerView.delegate = self ; pickerView.dataSource = self
-		pickerView.addSubview(headerBar)
 		
 		addSubview(wheelChoiceView)
-		
+
 	}
 	
 	func config(with model: WheelChoiceViewModel) {
@@ -94,12 +72,15 @@ class WheelChoiceView: UIView  {
 	
 	func updateConstraint() {
 		let constant:CGFloat
+		let alpha:CGFloat
 		
 		switch height.constant {
 		case 200:
 			constant = 0
+			alpha = 0
 		default:
 			constant = 200
+			alpha = 1
 			
 		}
 		
@@ -107,6 +88,9 @@ class WheelChoiceView: UIView  {
 		
 		UIView.animate(withDuration: 0.33) {
 			self.height.constant = constant
+			self.toolBar.alpha = alpha
+			self.pickerView.alpha = alpha
+			
 			self.view.layoutIfNeeded()
 			
 		}
