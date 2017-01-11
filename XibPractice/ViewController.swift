@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 	
 	let testModel = SliderChoiceViewModel(question: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 	let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "Add color", choices: [["red", "yellow", "blue"]], decimalAfterPosition: nil)
-	let multiChoiceModel = MultiChoiceViewModel(with: "Favorite food?" , index: nil, choices: ["banana", "carrot" ,"pear"])
+	let multiChoiceModel = MultiChoiceViewModel(with: "Are you hungry?" , index: nil, choices: ["yes" , "no" ])
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
