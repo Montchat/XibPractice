@@ -43,7 +43,7 @@ class WheelChoiceView: UIView  {
 		
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
 		
-		textField.delegate = self
+		textField.delegate = self ; textField.allowsEditingTextAttributes = false
 		
 		let pickerView = UIPickerView()
 		pickerView.delegate = self ; pickerView.dataSource = self
