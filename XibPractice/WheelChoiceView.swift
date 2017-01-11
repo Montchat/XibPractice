@@ -58,7 +58,16 @@ class WheelChoiceView: UIView  {
 		let headerBar = UIView(frame:startFrame)
 		headerBar.layer.borderWidth = 0.50
 		headerBar.layer.masksToBounds = true
-			
+		
+		let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
+		cancelButton.setTitle("Cancel", for: .normal)
+		
+		let addButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
+		addButton.setTitle("Ok", for: .normal)
+		
+		headerBar.addSubview(cancelButton)
+		headerBar.addSubview(addButton)
+		
 		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
 		
 		height.constant = 100
