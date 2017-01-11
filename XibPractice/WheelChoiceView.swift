@@ -27,24 +27,12 @@ class WheelChoiceView: UIView  {
 	}
 	
 	@IBAction func changeSelection(_ sender: Any) {
-		let constant:CGFloat
+		updateConstraint()
 		
-		
-		
-		switch height.constant {
-			case 100:
-			constant = 0
-		default:
-			constant = 100
-			
-		}
-		
-		view.layoutIfNeeded()
-		UIView.animate(withDuration: 0.33) {
-			self.height.constant = constant
-			self.view.layoutIfNeeded()
-			
-		}
+	}
+	
+	func cancel() {
+		updateConstraint()
 		
 	}
 	
@@ -61,16 +49,19 @@ class WheelChoiceView: UIView  {
 		
 		let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
 		cancelButton.setTitle("Cancel", for: .normal)
+		cancelButton.setTitleColor(UIColor.blue, for: .normal)
+		cancelButton.addTarget(self, action:"cancel" ,for: .touchUpInside)
 		
 		let addButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
 		addButton.setTitle("Ok", for: .normal)
+		addButton.setTitleColor(UIColor.blue, for: .normal)
 		
 		headerBar.addSubview(cancelButton)
 		headerBar.addSubview(addButton)
 		
 		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
 		
-		height.constant = 100
+		height.constant = 0
 		
 		pickerView.delegate = self ; pickerView.dataSource = self
 		pickerView.backgroundColor = UIColor.red
@@ -86,6 +77,27 @@ class WheelChoiceView: UIView  {
 		property.text = model.title
 		selection.setTitle(model.placeholder, for: .normal)
 		pickerView.reloadAllComponents()
+		
+	}
+	
+	func updateConstraint() {
+		let constant:CGFloat
+		
+		switch height.constant {
+		case 100:
+			constant = 0
+		default:
+			constant = 100
+			
+		}
+		
+		view.layoutIfNeeded()
+		
+		UIView.animate(withDuration: 0.33) {
+			self.height.constant = constant
+			self.view.layoutIfNeeded()
+			
+		}
 		
 	}
 	
