@@ -91,7 +91,7 @@
                             </items>
                         </toolbar>
                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y9h-Vl-stB">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            <rect key="frame" x="0.0" y="44" width="375" height="156"/>
                         </pickerView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,7 +99,7 @@
                         <constraint firstAttribute="bottom" secondItem="y9h-Vl-stB" secondAttribute="bottom" id="HUw-wS-XaB"/>
                         <constraint firstAttribute="trailing" secondItem="1qQ-d0-alq" secondAttribute="trailing" id="Jyx-3r-BcX"/>
                         <constraint firstItem="y9h-Vl-stB" firstAttribute="leading" secondItem="gD7-Ke-lrb" secondAttribute="leading" id="L6u-4o-u2e"/>
-                        <constraint firstItem="y9h-Vl-stB" firstAttribute="top" secondItem="gD7-Ke-lrb" secondAttribute="top" id="LxW-sT-5lM"/>
+                        <constraint firstItem="y9h-Vl-stB" firstAttribute="top" secondItem="gD7-Ke-lrb" secondAttribute="top" constant="44" id="LxW-sT-5lM"/>
                         <constraint firstItem="y9h-Vl-stB" firstAttribute="leading" secondItem="gD7-Ke-lrb" secondAttribute="leading" id="SWO-oc-8d7"/>
                         <constraint firstAttribute="trailing" secondItem="y9h-Vl-stB" secondAttribute="trailing" id="Xro-Xt-2c9"/>
                         <constraint firstItem="1qQ-d0-alq" firstAttribute="leading" secondItem="gD7-Ke-lrb" secondAttribute="leading" id="fcg-Sn-2fG"/>

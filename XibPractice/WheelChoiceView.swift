@@ -73,20 +73,23 @@ class WheelChoiceView: UIView  {
 	func updateConstraint() {
 		let constant:CGFloat
 		let alpha:CGFloat
+		let duration:Double
 		
 		switch height.constant {
 		case 200:
 			constant = 0
 			alpha = 0
+			duration = 0.165
 		default:
 			constant = 200
 			alpha = 1
+			duration = 0.33
 			
 		}
 		
 		view.layoutIfNeeded()
 		
-		UIView.animate(withDuration: 0.33) {
+		UIView.animate(withDuration: duration) {
 			self.height.constant = constant
 			self.toolBar.alpha = alpha
 			self.pickerView.alpha = alpha
