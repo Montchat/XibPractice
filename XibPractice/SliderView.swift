@@ -8,9 +8,9 @@
 
 import UIKit
 
-final class SliderView: UIView {
+class SliderView: UIView {
 	
-	var model:SliderChoiceViewModel = SliderChoiceViewModel()
+	var update: (Int) -> Void = {_ in }
 	
 	@IBOutlet var view: UIView!
 	
@@ -26,11 +26,8 @@ final class SliderView: UIView {
 	@IBOutlet var values: [UILabel]! // min == 0, median == 1, max == 2
 	
 	@IBAction func slide(_ sender: UISlider) {
-		
-		let intValue = Int(slider.value)
-		level.text = "Level: \(intValue)"
-		model.level = Int(intValue)
-		
+		update(Int(slider.value))
+	
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -45,11 +42,13 @@ final class SliderView: UIView {
 		super.init(frame: frame)
 		
 		guard let sliderView = Bundle.main.loadNibNamed(Component.sliderView, owner: self, options: nil)?[0] as? UIView else { return }
+		
 		addSubview(sliderView)
 		
 	}
 	
 	func config(with model:SliderChoiceViewModel) {
+		self.update = model.update
 		
 		slider.maximumValue = 10
 		slider.thumbTintColor = UIColor.tapDodgerBlue
@@ -62,6 +61,9 @@ final class SliderView: UIView {
 		self.question.text = model.question
 		self.minValue.text = model.minValue
 		self.maxValue.text = model.maxValue
+		
+		slider.value = Float(model.level)
+		level.text = "Level: \(model.level)"
 		
 		if medianValue != nil { self.medianValue.text = model.medianValue }
 			

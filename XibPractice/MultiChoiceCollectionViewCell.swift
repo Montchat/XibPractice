@@ -15,7 +15,6 @@ class MultiChoiceCollectionViewCell: UICollectionViewCell {
 	static var identifier = "MultiChoiceCollectionViewCell"
 	
 	@IBAction func buttonPressed(_ sender: Any) {
-		button.isSelected = !button.isSelected
 		
 	}
 	

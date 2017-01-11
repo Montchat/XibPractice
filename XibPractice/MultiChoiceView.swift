@@ -22,7 +22,7 @@ class MultiChoiceView: UIView {
 		super.init(coder: aDecoder)
 		
 		guard let sliderView = Bundle.main.loadNibNamed(Component.multiChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
-		
+
 		choicesView.register(UINib(nibName: MultiChoiceCollectionViewCell.identifier, bundle:nil), forCellWithReuseIdentifier:  MultiChoiceCollectionViewCell.identifier)
 		choicesView.bounces = false
 	
@@ -36,6 +36,11 @@ class MultiChoiceView: UIView {
 		
 		self.model = model
 		question.text = model.title
+		
+	}
+	
+	func updateWith(model: MultiChoiceViewModel) {
+		
 		
 	}
 	
