@@ -22,6 +22,9 @@ class WheelChoiceView: UIView  {
 	
 	var pickerView = UIPickerView()
 	
+	var oldValue:[Int] = []
+	
+	
 	@IBAction func questionPressed(_ sender: Any) {
 		print("question pressed")
 		
@@ -33,14 +36,27 @@ class WheelChoiceView: UIView  {
 	}
 	
 	func cancel() {
+		model.update(oldValue)
 		textField.resignFirstResponder()
 		
 	}
 	
 	func done() {
-		let selected = pickerView.selectedRow(inComponent: 0)
-		textField.text = model.choices[0][selected]
+		
+		let components = pickerView.numberOfComponents
+		
+		var indexes:[Int] = []
+		
+		for i in 0  ..< components  {
+			
+			let index = pickerView.selectedRow(inComponent: i)
+			indexes.append(index)
+			
+		}
+		
+		model.update(indexes)
 		textField.resignFirstResponder()
+		
 		
 	}
 	
@@ -98,6 +114,7 @@ class WheelChoiceView: UIView  {
 		textField.placeholder = model.placeholder
 		textField.text = model.choice
 		
+		
 	}
 
 }
@@ -105,12 +122,25 @@ class WheelChoiceView: UIView  {
 extension WheelChoiceView : UIPickerViewDelegate {
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		
-		textField.text = model.choices[component][row]
+		let components = pickerView.numberOfComponents
+		
+		var indexes:[Int] = []
+		
+		for i in 0  ..< components  {
+			
+			let index = pickerView.selectedRow(inComponent: i)
+			indexes.append(index)
+			
+		}
+		
+		model.update(indexes)
 		
 	}
+	
 }
 
 extension WheelChoiceView : UIPickerViewDataSource {
+	
 	
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
 		return model.choices[component].count
@@ -130,8 +160,8 @@ extension WheelChoiceView : UIPickerViewDataSource {
 extension WheelChoiceView : UITextFieldDelegate {
 	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
-		textField.inputView?.isHidden = false
-		
+		oldValue = model.indexes
+		print("OLDVALUE \(oldValue)")
 		
 	}
 	

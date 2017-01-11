@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 		
 		let sliderChoiceViewModel = SliderChoiceViewModel(question: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 		
-		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "Add color", choices: [["red", "yellow", "blue"]], decimalAfterPosition: nil)
+		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "combine color", choices: [["red", "yellow", "blue"], ["green", "pink", "brown"]], decimalAfterPosition: nil)
 		
 		let multiChoiceModel = MultiChoiceViewModel(with: "Are you hungry?" , index: 0, choices: ["yes" , "no" ])
 
@@ -31,16 +31,20 @@ class ViewController: UIViewController {
 			
 		}
 		
-		sliderView.config(with: sliderChoiceViewModel)
-		
-		wheelChoiceView.config(with: wheelChoiceModel)
+		wheelChoiceModel.update = { indexes in
+			wheelChoiceModel.indexes = indexes
+			self.wheelChoiceView.config(with: wheelChoiceModel)
+		}
 		
 		multiChoiceModel.update = { index in
 			
 			multiChoiceModel.index = index
 			self.multiChoiceView.config(with: multiChoiceModel)
+			
 		}
 		
+		sliderView.config(with: sliderChoiceViewModel)
+		wheelChoiceView.config(with: wheelChoiceModel)
 		multiChoiceView.config(with: multiChoiceModel)
 		
 	}

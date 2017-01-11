@@ -37,6 +37,7 @@ class MultiChoiceView: UIView {
 		choicesView.delegate = self ; choicesView.dataSource = self
 		question.text = model.title
 		choicesView.reloadData()
+		
 	}
 	
 }
@@ -49,6 +50,7 @@ extension MultiChoiceView : UICollectionViewDataSource {
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		
 		model.update(indexPath.item)
 	}
 	
