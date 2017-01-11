@@ -34,6 +34,7 @@ class WheelChoiceView: UIView  {
 			textField.becomeFirstResponder()
 		} else {
 			model.update([])
+			textField.resignFirstResponder()
 			
 		}
 		
