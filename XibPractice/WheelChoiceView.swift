@@ -159,7 +159,20 @@ extension WheelChoiceView : UIPickerViewDataSource {
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-		return model.choices[component][row]
+		let title:String
+		if let decimal = model.decimalAfterPosition {
+			if component == decimal {
+				title = model.choices[component][row] + "."
+			} else {
+				title = model.choices[component][row]
+				
+			}
+		} else {
+			title = model.choices[component][row]
+			
+		}
+		
+		return title
 
 	}
 	

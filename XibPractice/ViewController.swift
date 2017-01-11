@@ -21,7 +21,7 @@ class ViewController: UIViewController {
 		
 		let sliderChoiceViewModel = SliderChoiceViewModel(question: "test question", minValue: "0", medianValue: "5", maxValue: "10")
 		
-		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "combine color", choices: [["red", "yellow", "blue"], ["green", "pink", "brown"]], decimalAfterPosition: nil)
+		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "combine color", choices: [["red", "yellow", "blue"], ["green", "pink", "brown"]], decimalAfterPosition: 0)
 		
 		let multiChoiceModel = MultiChoiceViewModel(with: "Are you hungry?" , index: 0, choices: ["yes" , "no" ])
 
