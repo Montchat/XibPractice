@@ -25,6 +25,14 @@ class WheelChoiceView: UIView  {
 		
 	}
 		
+	func cancel() {
+		textField.resignFirstResponder()
+	}
+	
+	func done() {
+		textField.resignFirstResponder()
+		
+	}
 	
 	@IBAction func addOrRemove(_ sender: Any) {
 		
@@ -35,7 +43,40 @@ class WheelChoiceView: UIView  {
 		
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
 		
-		textField.inputView = UIPickerView() 
+		textField.delegate = self
+		
+		let pickerView = UIPickerView()
+		pickerView.delegate = self ; pickerView.dataSource = self
+		
+		let headerBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 44))
+		headerBar.autoresizingMask = [.flexibleWidth ]
+			
+		headerBar.layer.borderWidth = 0.50
+		headerBar.layer.masksToBounds = true
+		
+		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
+		
+		let cancelButton = UIButton(frame: CGRect(x: 0, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
+		cancelButton.setTitle("Cancel", for: .normal)
+		cancelButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
+		cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+		cancelButton.addTarget(self, action: #selector(WheelChoiceView.cancel), for: .touchUpInside)
+		cancelButton.autoresizingMask = [.flexibleLeftMargin, .flexibleWidth]
+		
+		let doneButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
+		
+		doneButton.setTitle("Done", for: .normal)
+		doneButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
+		doneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+		doneButton.addTarget(self, action: #selector(WheelChoiceView.done), for: .touchUpInside)
+		doneButton.autoresizingMask = [.flexibleRightMargin , .flexibleWidth]
+		
+		headerBar.addSubview(cancelButton)
+		headerBar.addSubview(doneButton)
+		
+		pickerView.addSubview(headerBar)
+		
+		textField.inputView = pickerView
 		
 		addSubview(wheelChoiceView)
 
@@ -45,16 +86,16 @@ class WheelChoiceView: UIView  {
 		
 		self.model = model
 		property.text = model.title
-		selection.setTitle(model.placeholder, for: .normal)
+		textField.placeholder = model.placeholder
 		
 	}
-	
-	
+
 }
 
 extension WheelChoiceView : UIPickerViewDelegate {
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-		selection.setTitle(model.choices[component][row], for: .normal)
+		
+		textField.text = model.choices[component][row]
 		
 	}
 }
@@ -82,6 +123,12 @@ extension WheelChoiceView : UITextFieldDelegate {
 		
 	}
 	
-	textField
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		return true 
+	}
 	
 }
