@@ -24,14 +24,16 @@ class WheelChoiceView: UIView  {
 		print("question pressed")
 		
 	}
-		
+	
 	func cancel() {
-		textField.resignFirstResponder()
+		print("cancel")
+		view.endEditing(true)
+		
 	}
 	
 	func done() {
-		textField.resignFirstResponder()
-		
+		print("done")
+		view.endEditing(true); textField.resignFirstResponder()
 	}
 	
 	@IBAction func addOrRemove(_ sender: Any) {
@@ -45,16 +47,18 @@ class WheelChoiceView: UIView  {
 		
 		textField.delegate = self ; textField.allowsEditingTextAttributes = false
 		
+		
 		let pickerView = UIPickerView()
+		pickerView.autoresizingMask = .flexibleWidth
+		
+		let pickerContainer = UIView(frame: pickerView.frame)
+		pickerContainer.autoresizingMask = .flexibleWidth
 		pickerView.delegate = self ; pickerView.dataSource = self
 		
 		let headerBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 44))
-		headerBar.autoresizingMask = [.flexibleWidth ]
-			
-		headerBar.layer.borderWidth = 0.50
-		headerBar.layer.masksToBounds = true
 		
-		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
+		headerBar.autoresizingMask = .flexibleWidth
+		headerBar.barStyle = .default
 		
 		let cancelButton = UIButton(frame: CGRect(x: 0, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
 		cancelButton.setTitle("Cancel", for: .normal)
@@ -74,9 +78,10 @@ class WheelChoiceView: UIView  {
 		headerBar.addSubview(cancelButton)
 		headerBar.addSubview(doneButton)
 		
-		pickerView.addSubview(headerBar)
+		pickerContainer.addSubview(pickerView)
+		pickerContainer.addSubview(headerBar)
 		
-		textField.inputView = pickerView
+		textField.inputView = pickerContainer
 		
 		addSubview(wheelChoiceView)
 
@@ -87,6 +92,7 @@ class WheelChoiceView: UIView  {
 		self.model = model
 		property.text = model.title
 		textField.placeholder = model.placeholder
+		textField.text = model.choice
 		
 	}
 
@@ -120,12 +126,16 @@ extension WheelChoiceView : UIPickerViewDataSource {
 extension WheelChoiceView : UITextFieldDelegate {
 	
 	func textFieldDidBeginEditing(_ textField: UITextField) {
+		textField.inputView?.isHidden = false
+		
 		
 	}
 	
 	func textFieldDidEndEditing(_ textField: UITextField) {
+		textField.resignFirstResponder()
 		
 	}
+	
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		return true 
