@@ -51,26 +51,26 @@ class WheelChoiceView: UIView  {
 		
 		guard let wheelChoiceView = Bundle.main.loadNibNamed(Component.wheelChoiceView, owner: self, options: nil)?[0] as? UIView else { return }
 		
-		let startFrame = CGRect(x: 0, y: pickerView.bounds.minY, width: pickerView.frame.width, height: 40)
+		let startFrame = CGRect(x: 0, y: pickerView.bounds.minY, width: pickerView.frame.width, height: 43)
 		
 		let headerBar = UIView(frame:startFrame)
 		headerBar.layer.borderWidth = 0.50
 		headerBar.layer.masksToBounds = true
 		
-		let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 80, height: 18))
+		let cancelButton = UIButton(frame: CGRect(x: 7, y: headerBar.frame.origin.y + 13.4, width: 48, height: 18))
 		cancelButton.setTitle("Cancel", for: .normal)
 		cancelButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
 		cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
 		cancelButton.addTarget(self, action: #selector(WheelChoiceView.cancel), for: .touchUpInside)
 		
-		let addButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
-		addButton.setTitle("Ok", for: .normal)
-		addButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
-		addButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
-		addButton.addTarget(self, action: #selector(WheelChoiceView.selectValue), for: .touchUpInside)
+		let doneButton = UIButton(frame: CGRect(x:headerBar.frame.maxX - 38 - 7, y: headerBar.frame.origin.y + 13.4, width: 38, height: 18))
+		doneButton.setTitle("Done", for: .normal)
+		doneButton.setTitleColor(UIColor.tapBrightBlue, for: .normal)
+		doneButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 15)
+		doneButton.addTarget(self, action: #selector(WheelChoiceView.selectValue), for: .touchUpInside)
 		
 		headerBar.addSubview(cancelButton)
-		headerBar.addSubview(addButton)
+		headerBar.addSubview(doneButton)
 		
 		headerBar.backgroundColor = UIColor(red: 0.96, green: 0.96, blue: 0.96, alpha: 1)
 		
@@ -96,10 +96,10 @@ class WheelChoiceView: UIView  {
 		let constant:CGFloat
 		
 		switch height.constant {
-		case 100:
+		case 200:
 			constant = 0
 		default:
-			constant = 100
+			constant = 200
 			
 		}
 		
