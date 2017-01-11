@@ -13,7 +13,7 @@ class WheelChoiceView: UIView  {
 	var model:WheelChoiceViewModel = WheelChoiceViewModel()
 	
 	@IBOutlet var view: UIView!
-
+	
 	@IBOutlet weak var property: UILabel!
 	
 	@IBOutlet weak var selection: UIButton!
@@ -30,17 +30,18 @@ class WheelChoiceView: UIView  {
 	}
 	
 	@IBAction func addOrRemove(_ sender: Any) {
+		
 		if model.choice == "" {
 			textField.becomeFirstResponder()
 		} else {
 			model.update([])
 			textField.resignFirstResponder()
-			
 		}
 		
 	}
 	
 	func cancel() {
+		
 		model.update(oldValue)
 		textField.resignFirstResponder()
 		
@@ -61,7 +62,6 @@ class WheelChoiceView: UIView  {
 		
 		model.update(indexes)
 		textField.resignFirstResponder()
-		
 		
 	}
 	
@@ -109,7 +109,7 @@ class WheelChoiceView: UIView  {
 		self.pickerView = pickerView
 		
 		addSubview(wheelChoiceView)
-
+		
 	}
 	
 	func config(with model: WheelChoiceViewModel) {
@@ -128,10 +128,11 @@ class WheelChoiceView: UIView  {
 		textField.text = model.choice
 		
 	}
-
+	
 }
 
 extension WheelChoiceView : UIPickerViewDelegate {
+	
 	func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
 		
 		let components = pickerView.numberOfComponents
@@ -155,17 +156,40 @@ extension WheelChoiceView : UIPickerViewDataSource {
 	
 	
 	func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-		return model.choices[component].count
+		let rows:Int
+		
+		if let dec = model.decimalAfterPosition {
+			
+			let decimalRow = dec + 1
+			
+			if component < decimalRow {
+				rows = model.choices[component].count
+			} else if component == decimalRow {
+				rows = 1
+			}
+			else {
+				assert(component>decimalRow) 
+				rows = model.choices[component - 1].count
+			}
+			
+		} else { rows = model.choices[component].count }
+		
+		return rows
+		
 	}
 	
 	func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
 		let title:String
-		if let decimal = model.decimalAfterPosition {
-			if component == decimal {
-				title = model.choices[component][row] + "."
-			} else {
+		
+		if let position = model.decimalAfterPosition {
+			let decimalRow = position + 1
+			
+			if component < decimalRow {
 				title = model.choices[component][row]
-				
+			} else if component == decimalRow {
+				title = "."
+			} else {
+				title = model.choices[component - 1][row]
 			}
 		} else {
 			title = model.choices[component][row]
@@ -173,12 +197,27 @@ extension WheelChoiceView : UIPickerViewDataSource {
 		}
 		
 		return title
-
+		
 	}
 	
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
-		return model.choices.count
+		let number:Int
+		
+		if let _ = model.decimalAfterPosition {
+			number = model.choices.count + 1
+			
+		} else {
+			number = model.choices.count
+		}
+		
+		return number
+		
 	}
+	
+	func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+		return 30
+	}
+	
 	
 }
 
@@ -194,9 +233,8 @@ extension WheelChoiceView : UITextFieldDelegate {
 		
 	}
 	
-	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-		return true 
+		return true
 	}
 	
 }

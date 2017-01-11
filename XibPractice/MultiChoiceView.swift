@@ -45,12 +45,10 @@ class MultiChoiceView: UIView {
 extension MultiChoiceView : UICollectionViewDataSource {
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		
 		return model.choices.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		
 		model.update(indexPath.item)
 	}
 	
@@ -70,7 +68,6 @@ extension MultiChoiceView : UICollectionViewDelegate {
 		if let index = model.index {
 			if indexPath == index {
 				collectionViewCell.button.isSelected = true
-				
 			} else {
 				collectionViewCell.button.isSelected = false
 			}

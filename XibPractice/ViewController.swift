@@ -20,9 +20,7 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		
 		let sliderChoiceViewModel = SliderChoiceViewModel(question: "test question", minValue: "0", medianValue: "5", maxValue: "10")
-		
-		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "combine color", choices: [["red", "yellow", "blue"], ["green", "pink", "brown"]], decimalAfterPosition: 0)
-		
+		let wheelChoiceModel = WheelChoiceViewModel(title: "Color", placeholder: "combine color", choices: [["0" ,"1", "2" ], ["3", "4", "5"]], decimalAfterPosition: 1)
 		let multiChoiceModel = MultiChoiceViewModel(with: "Are you hungry?" , index: 0, choices: ["yes" , "no" ])
 
 		sliderChoiceViewModel.update = { level in
